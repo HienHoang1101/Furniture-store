@@ -1,0 +1,236 @@
+<span style="font-family: verdana, geneva, sans-serif;">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>WEB ADMIN</title>
+        <link rel="stylesheet" href="style/style_admin.css" />
+        <link rel="stylesheet" href="style/style_useradmin.css">
+        <!-- Font Awesome Cdn Link -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="container">
+            <nav>
+                <div class="navbar">
+                    <a href="index.html" style="color: black;">
+                        <div class="logo">
+                          <a href="user-info.html"><img src="image/meoadmin.jpg" alt=""> </a>
+                            <h1></h1>
+                        </div>
+                    </a>
+                    <div class="account-type">Tài khoản: Admin</div>
+                    <ul>
+                        <li>
+                            <!-- drop down sidebar -->
+                            <div class="sidenav">
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-user fa-xl"></i>
+                                    <span class="nav-item">Quản lý người dùng </span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="index.html" class="font-bold">Quản lý</a>
+                                    <a href="add_user-admin.html" class="font-bold">Thêm người dùng</a>
+                                </div>
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                    <span class="nav-item">Quản lý đơn hàng </span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="cart-admin.html" class="font-bold">Danh sách đơn</a>
+                                </div>
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-list fa-xl"></i>
+                                    <span class="nav-item">Quản lý sản phẩm </span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="products-admin.html" class="font-bold">Chi tiết sản phẩm</a>
+                                    <a href="add_products-admin.html" class="font-bold">Thêm sản phẩm</a>
+                                </div>
+
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-chart-simple fa-xl"></i>
+                                    <span class="nav-item">Thống kê</span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="user_statistic-admin.html" class="font-bold">Theo khách hàng</a>
+                                    <a href="cart_statistic-admin.html" class="font-bold">Theo đơn hàng</a>
+                                </div>
+
+                                <script>
+                                    var dropdown = document.getElementsByClassName("dropdown-btn");
+                                    var i;
+
+                                    for (i = 0; i < dropdown.length; i++) {
+                                        dropdown[i].addEventListener("click", function () {
+                                            this.classList.toggle("active");
+                                            var dropdownContent = this.nextElementSibling;
+                                            if (dropdownContent.style.display === "block") {
+                                                dropdownContent.style.display = "none";
+                                            } else {
+                                                dropdownContent.style.display = "block";
+                                            }
+                                        });
+                                    }
+                                </script>
+                            </div>
+                        </li>
+                        <li class="bottom">
+                            <a href="#" class="logout" onclick="logOut()">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span class="nav-item">Đăng xuất</span>
+                            </a>
+                            <script>
+                                function logOut() {
+                                    if (confirm('Đăng xuất ?')) {
+                                        alert("Đăng xuất thành công");
+                                        window.location.replace("../web/login.html");
+                                    }
+                                }
+                            </script>
+                        </li>
+                    </ul>
+                </div>
+            </nav>;
+            <!-- top banner -->
+            <div class="top-banner">
+                <p>online store</p>
+            </div>
+
+            <section class="main">
+                <div class="main-top"></div>
+                <div class="background-section">
+                    <div class="main-body">
+                        <h1>QUẢN LÝ TÀI KHOẢN NGƯỜI DÙNG</h1>
+                    </div>
+                    <table style="width:90%">
+                        <tr>
+                            <th class="stt">STT</th>
+                            <th>Họ và tên</th>
+                            <th>Tên đăng nhập</th>
+                            <th>Mật khẩu</th>
+                            <th style="width: 18%;" colspan="2">Tình trạng tài khoản</th>
+                            <th class="thongtin">Thông tin</th>
+                        </tr>
+                        <tr>
+                            <td class="stt"> 1 </td>
+                            <td class="stt"> nguyen linh </td>
+                            <td class="stt"> 1 </td>
+                            <td class="stt"> </td>
+
+                            <!--chuc nang-->
+                            <form method="POST">
+                                <td class="status stt">
+                                    <input type="hidden" name="username" value="1">
+                                    <input type="checkbox" name="lock" value="1" checked>
+                                </td>
+
+                                <td class="khoa">
+                                    <input type="submit" name="submit" value="Thao tác">
+                                </td>
+
+                                <td class="sua">
+                                    <input type="submit" name="submitFix" class="sua" value="Sửa">
+                                </td>
+                            </form>
+                        </tr>
+                        <td class="stt"> 2 </td>
+                        <td class="stt"> thu hien </td>
+                        <td class="stt"> 123 </td>
+                        <td class="stt"> </td>
+
+                        <!--chuc nang-->
+                        <form method="POST">
+                            <td class="status stt">
+                                <input type="hidden" name="username" value="123">
+                                <input type="checkbox" name="lock" value="1" checked>
+                            </td>
+
+                            <td class="khoa">
+                                <input type="submit" name="submit" value="Thao tác">
+                            </td>
+
+                            <td class="sua">
+                                <input type="submit" name="submitFix" class="sua" value="Sửa">
+                            </td>
+                        </form>
+                        </tr>
+                        <td class="stt"> 3 </td>
+                        <td class="stt"> a aa </td>
+                        <td class="stt"> aaa </td>
+                        <td class="stt"> 123 </td>
+
+                        <!--chuc nang-->
+                        <form method="POST">
+                            <td class="status stt">
+                                <input type="hidden" name="username" value="aaa">
+                                <input type="checkbox" name="lock" value="1" checked>
+                            </td>
+
+                            <td class="khoa">
+                                <input type="submit" name="submit" value="Thao tác">
+                            </td>
+
+                            <td class="sua">
+                                <input type="submit" name="submitFix" class="sua" value="Sửa">
+                            </td>
+                        </form>
+                        </tr>
+                        <td class="stt"> 4 </td>
+                        <td class="stt"> dieu linh </td>
+                        <td class="stt"> dieulinh </td>
+                        <td class="stt"> 1 </td>
+
+                        <!--chuc nang-->
+                        <form method="POST">
+                            <td class="status stt">
+                                <input type="hidden" name="username" value="nhattruong">
+                                <input type="checkbox" name="lock" value="1" checked>
+                            </td>
+
+                            <td class="khoa">
+                                <input type="submit" name="submit" value="Thao tác">
+                            </td>
+
+                            <td class="sua">
+                                <input type="submit" name="submitFix" class="sua" value="Sửa">
+                            </td>
+                        </form>
+                        </tr>
+                        <td class="stt"> 5 </td>
+                        <td class="stt"> hoang hien </td>
+                        <td class="stt"> hoanghien </td>
+                        <td class="stt"> 1 </td>
+
+                        <!--chuc nang-->
+                        <form method="POST">
+                            <td class="status stt">
+                                <input type="hidden" name="username" value="test2">
+                                <input type="checkbox" name="lock" value="1" checked>
+                            </td>
+
+                            <td class="khoa">
+                                <input type="submit" name="submit" value="Thao tác">
+                            </td>
+
+                            <td class="sua">
+                                <input type="submit" name="submitFix" class="sua" value="Sửa">
+                            </td>
+                        </form>
+                        </tr>
+                    </table>
+                    <div style="padding-top: 30px">
+                        <div class='pagination' style='font-size: 20px;'> Trang <a
+                                style='text-decoration: none; padding: 0; min-width: 2.5rem; text-align: center; height: 1.875rem; font-size: 1.25rem; margin-left: .9375rem; margin-right: .9375rem; color: rgba(0,0,0,.4); display: inline; justify-content: center;'
+                                href='&page=1'>1</a></div>
+                    </div>
+            </section>
+
+        </div>
+    </body>
+
+    </html>

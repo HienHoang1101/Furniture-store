@@ -1,0 +1,125 @@
+table{
+    margin-left: 5%;
+    width: 90%;
+    margin-bottom: 3%;
+}
+th, td, table{
+    border: solid 1px black;
+    border-collapse:collapse;
+}
+th,td{
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    /* padding: 5px; */
+}
+th:not(.mavandon):not(th.name):not(th.address):not(th.sdt){
+    background-color: #343a40;
+    color: #dfdfdf;
+    border: solid 1px white;
+}
+
+
+.mavandon{
+    text-align: left;
+    padding-left: 10px;
+
+}
+
+/* ô thông tin người đặt*/
+.user{
+    width: 40%;
+}
+.name{
+    width: 10%;
+    text-align: center;
+    text-align: center;
+}
+.sdt{
+    width: 10%;
+    text-align: center;
+}
+.address{
+    width: 20%;
+    padding-left: 5px;
+}
+
+
+
+/* ô sản phẩm */
+th.sanpham {
+    width: 15%;
+
+}
+td.soluong{
+    text-align: center;
+    width: 5%;
+}
+div.soluong{
+    margin-bottom: 8px;
+}
+div.sanpham{
+    margin-bottom: 8px;
+}
+
+
+td.sanpham{
+    text-align: center;
+    width: 10%;
+    padding-left: 5px;
+}
+
+/* ô doanh thu đơn hàng */
+.doanhthu{
+    width: 10%;
+    text-align: center;
+}
+.pttt{
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: left;
+    margin-top: 6px;
+    padding-left: 5px;
+}
+/* ô trạng thái */
+.trangthai{
+    text-align: center;
+}
+
+/* ô đơn vị vận chuyển */
+.vanchuyen{
+    width: 10%;
+    text-align: center;
+}
+
+
+/* Thòi gian tạo đơn */
+.thoigian{
+    width: 15%;
+}
+.date{
+    width: 15%;
+    text-align: center;
+}
+
+
+/* nút duyệt form */
+.duyet-form, .buttonDuyet{
+    cursor: pointer;
+}
+.buttonDuyet:hover{
+    font-weight: bold;
+    color: red;
+}
+/* background của page */
+.background-section{
+    margin-bottom: 30px;
+    padding-bottom: 13%;
+}  
+
+/* nút quay lại trang trước */
+.button-back {
+    position: fixed;
+    bottom: 90px;
+    margin-left: 20px;
+}

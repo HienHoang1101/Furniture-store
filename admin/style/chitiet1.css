@@ -1,0 +1,54 @@
+table, th,td {
+    width: 90%;
+    border: solid 1px black;
+}
+table{
+    margin-left: 5%;
+}
+th,td{
+    padding: 10px;
+}
+th{
+    background-color: #343a40;
+    color: white;
+}
+td{
+    text-align: center;
+}
+
+.soluong{
+    width: 5%;
+}
+.dongia{
+    width: 15%;
+}
+.date{
+    width: 15%;
+}
+.mavandon{
+    width: 10%;
+}
+.name{
+    width: 10%;
+}
+.sdt{
+    width: 10%;
+}
+.address{
+    width: 30%;
+    text-align: left;
+}
+
+/* nút quay lại trang trước */
+.button-back{
+    display: block;
+    margin-top: 8%;
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* khung của section */
+.background-section{
+    margin-bottom: 3%;
+    padding-bottom: 3%;
+}

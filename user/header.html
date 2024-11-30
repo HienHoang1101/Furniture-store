@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm sản phẩm</title>
+    <script>
+        // Giả lập dữ liệu sản phẩm
+        const products = [
+        { id: 5,image: 'image1.jpg', name: 'Bàn văn phòng', trang_thai: 1 },
+        { id: 6, image: 'mirror4.jpg', name: 'Gương siêu bự', trang_thai: 1 },
+        { id: 7, image: 'sofa4.jpg',name: 'Sofa loại cực êm', trang_thai: 1 },
+        { id: 9, image: 'table4.jpg',name: 'Bàn siêu cứng', trang_thai: 1 },
+        { id: 10, image: 'bed1.jpg',name: 'Giường gỗ bạch dương', trang_thai: 1 },
+        { id: 11, image: 'bed2.jpg',name: 'Giường tiện lợi', trang_thai: 1 },
+        { id: 12, image: 'sofa1.jpg',name: 'Sofa luxury', trang_thai: 1 },
+        { id: 13, image: 'sofa2.jpg',name: 'Sofa trắng tinh tế', trang_thai: 1 },
+        { id: 14,image: 'table1.jpg', name: 'Bàn kính', trang_thai: 1 },
+        { id: 15, image: 'table2.jpg',name: 'Bàn văn phòng', trang_thai: 1 },
+        { id: 16, image: 'mirror1.jpg',name: 'Gương trang điểm', trang_thai: 1 },
+        { id: 17, image: 'mirror2.jpg',name: 'Gương mặt trời', trang_thai: 1 },
+        { id: 18, image: 'bed5.jpg',name: 'Giường luxury', trang_thai: 1 },
+        { id: 19, image: 'sofa5.jpg',name: 'Sofa loại tốt', trang_thai: 1 },
+        { id: 20, image: 'table5.jpg',name: 'Bàn gỗ sồi', trang_thai: 1 },
+            // Thêm dữ liệu sản phẩm khác nếu cần
+        ];
+
+        function searchProducts() {
+            const searchText = document.getElementById("searchtext").value;
+            const page = parseInt(document.getElementById("page").value) || 1;
+            const itemsPerPage = 8;
+            const page1 = (page - 1) * itemsPerPage;
+
+            const filteredProducts = products.filter(product => 
+                product.tensp.toLowerCase().includes(searchText.toLowerCase()) && product.trang_thai !== 0
+            );
+
+            const paginatedProducts = filteredProducts.slice(page1, page1 + itemsPerPage);
+            displayProducts(paginatedProducts);
+        }
+
+        function displayProducts(products) {
+            const productContainer = document.getElementById("productContainer");
+            productContainer.innerHTML = ''; // Xóa nội dung cũ
+
+            products.forEach(product => {
+                const productDiv = document.createElement("div");
+                productDiv.textContent = product.tensp; // Hiển thị tên sản phẩm
+                productContainer.appendChild(productDiv);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="topnav">
+        <div style="display: flex;" class="dangxuat">
+            <a href="register.html" class="dangxuat">Đăng ký</a>
+        </div>
+        <div style="display: inline-flex;" class="dangnhap">
+            <a href="login.html">Đăng nhập</a>
+        </div>
+
+        <a class="active" href="index.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="#" id="giohang">Giỏ hàng</a>
+        <script>
+            document.getElementById("giohang").onclick = function() {
+                alert("Hãy đăng nhập trước để vào giỏ hàng");
+                location.assign("login.html");
+            }
+        </script>
+        <a href="advanced_product_search.html" class="account">Tìm kiếm</a>
+        <div class="search-container">
+            <input type="text" id="searchtext" placeholder="Tìm kiếm..">
+            <input type="number" id="page" value="1" style="display:none;"> <!-- Ẩn input page -->
+            <button type="button" onclick="searchProducts()">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="productContainer">
+       
+    </div> <!-- Nơi hiển thị sản phẩm -->
+</body>
+</html>

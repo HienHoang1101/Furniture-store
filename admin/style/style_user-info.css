@@ -1,0 +1,46 @@
+/* Thông tin chi tiết người dùng */
+table, th,td{
+    border: solid 1px black;
+}
+table{
+    width: 90%;
+    margin-left: 5%;
+}
+th{
+    padding: 10px;
+    font-size: 16px;
+    background-color: #343a40;
+    color: white;
+}
+td{
+    padding: 10px;
+}
+
+/* nút quay lại trang trước */
+.button-back{
+    display: block;
+    margin-top: 8%;
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* khung của section */
+.background-section{
+    margin-bottom: 3%;
+    padding-bottom: 3%;
+}
+/* ô sửa */
+.sua{
+    text-align: center;
+    color: blue;
+}
+.sua:hover{
+    font-weight: bold;
+}
+/* ô ảnh đại diện */
+.name{
+    padding-top: 10px;
+    text-align: center;
+}
+
+

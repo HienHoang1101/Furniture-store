@@ -1,0 +1,136 @@
+#site {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+
+#masthead {
+	margin-top: 10%;
+	padding: 2em 0 0.5em 0;
+	border-bottom: 1px solid #ddd;
+}
+
+#masthead h1 {
+	margin: 0;
+	font-size: 3.5em;
+	overflow: hidden;
+	padding-left: 85px;
+	min-height: 82px;
+	line-height: 2.3;
+}
+
+
+
+#shopping-cart {
+	margin: 1.5em 0;
+}
+
+.shopping-cart {
+	border: 3px solid #ddd;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.shopping-cart th {
+	font-size: 22px;
+	padding: 0.3em;
+	width: 33.3%;
+	border: 3px solid #ddd;
+	text-transform: uppercase;
+}
+
+.shopping-cart td {
+	padding: 0.3em;
+	width: 33.3%;
+	border: 3px solid #ddd;
+	text-align: center;
+	font-size: 18px;
+}
+
+.shopping-cart tr:nth-child(even) {
+	background: #fafafa;
+}
+
+.shopping-cart td.pdelete {
+	text-align: center;
+}
+
+
+#shopping-cart-actions {
+	margin: 1.5em 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#shopping-cart-actions li {
+	display: inline-block;
+	margin-right: 1em;
+}
+#sub-total {
+	margin: 1.5em 0;
+	background-color:aqua;
+	padding: 10px;
+	width: fit-content;
+	margin-left: 83%;
+	font-size: 18px;
+	border-radius: 5px;
+}
+.btn{
+	background: #800;
+	color: white;
+	border-radius: 4px;
+	border: 1px solid white;
+}
+ a.btn {
+	display: inline-block;
+	background: #ee4d2d;
+	color: #fff;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #ee4d2d;
+	margin-left: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20px;
+	font-family: 'Times New Roman', Times, serif;
+ }
+
+#site-info {
+	height: 3em;
+	width: 100%;
+	line-height: 3;
+	text-align: center;
+	background: #00CDCD;
+	position: absolute;
+	color: #fff;
+	left: 0;
+	bottom: 0;
+}
+h1, tr{
+	text-align: center;
+}
+
+.cart-empty {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: rgba(0, 0, 0, 0.4);
+	font-size: .999rem;
+	line-height: 1rem;
+	margin-top: 2rem;
+	font-weight: 700;
+}
+
+.cart-img {
+	height: 6.125rem;
+	width: 6.75rem;
+}
+.div-cart-img {
+	background-position: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}

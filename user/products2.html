@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sản phẩm</title>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width,initial-scal=1.0">
+    <meta http-equip="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_topnav.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_pagination.css">
+    <link rel="stylesheet" href="style/style_ourteam.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="style/style_products.css" media="screen" type="text/css">
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section id="home">
+        <div class="topnav">
+            <div style="display: flex;" class="dangxuat">
+                <a href="register.html" class="dangxuat">Đăng ký</a>
+            </div>
+            <div style="display: inline-flex;" class="dangnhap">
+                <a href="login.html">Đăng nhập</a>
+            </div>
+
+            <a class="active" href="index.html">Trang chủ</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="#" id="giohang">Giỏ hàng</a>
+            <script>
+                button = document.getElementById("giohang");
+                button.onclick = function () {
+                    alert("Hãy đăng nhập trước để vào giỏ hàng");
+                    location.assign("login.html");
+                }
+            </script>
+            <a href="advanced_product_search.html" class="account">Tìm kiếm</a>
+            <div class="search-container">
+                <form action="product_search.html" method="get">
+                    <input type="text" placeholder="Tìm kiếm.." name="searchtext">
+                    <button type="submit" name="search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="featured-categories" id="products">
+        <div class="container">
+            <div class="title-box">
+                <h2>DANH MỤC</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h1>Giường</h1>
+                    <a href="categories1.html?id_danhmuc=1">
+                        <img src="images/bed5.jpg">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <h1>Ghế</h1>
+                    <a href="categories2.html?id_danhmuc=2">
+                        <img src="images/sofa5.jpg">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <h1>Bàn</h1>
+                    <a href="categories3.html?id_danhmuc=3">
+                        <img src="images/table5.jpg">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <h1>Gương</h1>
+                    <a href="categories4.html?id_danhmuc=4">
+                        <img src="images/mirror5.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- top nav -->
+    <br>
+    <section class="on-sale">
+        <div id="site">
+            <div class="container">
+                <div class="title-box">
+                    <h2>ĐỒ NỘI THẤT</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="product-top">
+                            <img src="images/sofa1.jpg" alt="">
+                            <div class="overlay-right">
+                                <a href="productdetail12.html" class="btn btn-secondary" title="Xem chi tiết">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                    <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
+                                        name="themvaogiohang">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="product-bottom text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h4>SOFA LUXURY</h4>
+                            <div>
+                                <p class="product-price">250€</p>
+                                <input type="hidden" name="id_product" value="12">
+                                <label for="qty-12">Số lượng</label>
+                                <input type="number" class="product-value" min="1" max="1000" name="quantity"
+                                    value="1" />
+                                <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
+                                    <p>
+                                        <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-top">
+                            <img src="images/bed2.jpg" alt="">
+                            <div class="overlay-right">
+                                <a href="productdetail11.html" class="btn btn-secondary" title="Xem chi tiết">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                    <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
+                                        name="themvaogiohang">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="product-bottom text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h4>GIƯỜNG TIỆN LỢI</h4>
+                            <div>
+                                <p class="product-price">290€</p>
+                                <input type="hidden" name="id_product" value="11">
+                                <label for="qty-11">Số lượng</label>
+                                <input type="number" class="product-value" min="1" max="1000" name="quantity"
+                                    value="1" />
+                                <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
+                                    <p>
+                                        <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-top">
+                            <img src="images/bed1.jpg" alt="">
+                            <div class="overlay-right">
+                                <a href="productdetail10.html" class="btn btn-secondary" title="Xem chi tiết">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                    <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
+                                        name="themvaogiohang">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="product-bottom text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h4>GIƯỜNG GỖ BẠCH DƯƠNG</h4>
+                            <div>
+                                <p class="product-price">300€</p>
+                                <input type="hidden" name="id_product" value="10">
+                                <label for="qty-10">Số lượng</label>
+                                <input type="number" class="product-value" min="1" max="1000" name="quantity"
+                                    value="1" />
+                                <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
+                                    <p>
+                                        <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-top">
+                            <img src="images/table4.jpg" alt="">
+                            <div class="overlay-right">
+                                <a href="productdetail9.html" class="btn btn-secondary" title="Xem chi tiết">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                    <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
+                                        name="themvaogiohang">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="product-bottom text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h4>BÀN SIÊU CỨNG</h4>
+                            <div>
+                                <p class="product-price">75€</p>
+                                <input type="hidden" name="id_product" value="8">
+                                <label for="qty-8">Số lượng</label>
+                                <input type="number" class="product-value" min="1" max="1000" name="quantity"
+                                    value="1" />
+                                <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
+                                    <p>
+                                        <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-top">
+                            <img src="images/sofa4.jpg" alt="">
+                            <div class="overlay-right">
+                                <a href="productdetail7.html" class="btn btn-secondary" title="Xem chi tiết">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                    <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
+                                        name="themvaogiohang">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="product-bottom text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h4>SOFA LOẠI CỰC ÊM</h4>
+                            <div>
+                                <p class="product-price">260€</p>
+                                <input type="hidden" name="id_product" value="7">
+                                <label for="qty-7">Số lượng</label>
+                                <input type="number" class="product-value" min="1" max="1000" name="quantity"
+                                    value="1" />
+                                <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
+                                    <p>
+                                        <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-top">
+                            <img src="images/mirror4.jpg" alt="">
+                            <div class="overlay-right">
+                                <a href="productdetail6.html" class="btn btn-secondary" title="Xem chi tiết">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                    <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
+                                        name="themvaogiohang">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="product-bottom text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h4>GƯƠNG SIÊU BỰ</h4>
+                            <div>
+                                <p class="product-price">90€</p>
+                                <input type="hidden" name="id_product" value="6">
+                                <label for="qty-6">Số lượng</label>
+                                <input type="number" class="product-value" min="1" max="1000" name="quantity"
+                                    value="1" />
+                                <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
+                                    <p>
+                                        <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-top">
+                            <img src="images/bed3.jpg" alt="">
+                            <div class="overlay-right">
+                                <a href="productdetail5.html" class="btn btn-secondary" title="Xem chi tiết">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                    <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
+                                        name="themvaogiohang">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="product-bottom text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h4>GIƯỜNG ĐÔI</h4>
+                            <div>
+                                <p class="product-price">120€</p>
+                                <input type="hidden" name="id_product" value="5">
+                                <label for="qty-5">Số lượng</label>
+                                <input type="number" class="product-value" min="1" max="1000" name="quantity"
+                                    value="1" />
+                                <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
+                                    <p>
+                                        <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                        <script>
+                            function checkLogin(event) {
+                                // Prevent the default form submission
+                                event.preventDefault();
+
+                                // Check if the user is logged in
+                                // This is a placeholder. Replace with actual login check logic.
+                                const isLoggedIn = false; // Change this to your actual login check
+
+                                if (isLoggedIn) {
+                                    // If the user is logged in, submit the form
+                                    document.getElementById('add-to-cart-form').submit();
+                                    document.getElementById('buy-form').submit();
+                                } else {
+                                    // If the user is not logged in, redirect to the login page
+                                    window.location.href = '../user/login.html'; // Change to your actual login URL\
+
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+    <div style="text-align: center;">
+        <p style="font-size: 20px;">Trang :
+            <a class="phantrang" href="products.html?page=1" style="text-decoration:none;"> 1 </a><a class="phantrang"
+                href="products2.html?page=2" style="text-decoration:none;"> 2 </a>
+        </p>
+    </div>
+    <br><br>
+</body>
+
+</html>

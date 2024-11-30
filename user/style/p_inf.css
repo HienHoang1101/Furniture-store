@@ -1,0 +1,188 @@
+.container_swap{
+width: 400px;
+}
+
+.div_left{
+	float: left;
+	text-align: left;
+	width: 20%;
+	border: 2px solid black;
+	height: 300px;
+	margin-top: 5%;
+	margin-bottom: 10%;
+	margin-left: 10%;
+	margin-right: 5%;
+}
+
+.div_right{
+	float: right;
+	text-align: left;
+	width: 45%;
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 15%;
+	margin-bottom: auto;
+	border: 2px solid black;
+}
+.div_center{
+	text-align: left;
+	width: 45%;
+	margin-top: 3%;
+	margin-left: 27.5%;
+	border: 2px solid black;
+}
+
+.div_content_left{
+	margin-left: 20% ;
+}
+.red_dot{
+	color: red;
+}
+
+.edit_p_inf{
+	background-color: #28A745;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 18px;
+}
+input{
+	padding-left: 5px;
+}
+
+/*phan dia chi va them dia chi*/
+.nav_address{
+	margin-right: 68%;
+	margin-top: 15px;
+}
+.nav{
+	display: flex;
+	margin:0 5% 0 2%;
+	padding-bottom: 20px;
+}
+.nav_add_address{
+	margin-top: 20px;
+}
+a[href="add_address.php"]{
+	font-size: 16px;
+}
+a:hover[href="add_address.php"]{
+	text-decoration:none;
+	color: red;
+}
+.box{
+	border: 1px solid rgba(0,0,0,.26);
+	padding: 8px 20px;
+	color: red;
+}
+
+
+/*dong khung dia chi*/
+.SXp5o_{
+	padding:18px 0 20px 0;
+}
+.UUD4No{
+	border-bottom: 1px solid rgba(0,0,0,.09);
+	display: flex;
+	border-top: 1px solid rgba(0,0,0,.9);
+
+}
+._RPpod{
+	min-width:0;
+	width: 100%;
+}
+.X57SfF{
+	margin-bottom: 4px;
+}
+.V4So7f{
+	justify-content: space-between;
+}
+.E24UKj, .V4So7f, .YziUfM, .lWXnp3{
+	display: flex;
+}
+.QyRpwQ{
+	margin-right: 8px;
+}
+.lWXnp3{
+	flex-grow: 1;
+}
+.Fi1zsg{
+	color: rgba(0,0,0,.87);
+	font-size: 16px;
+	line-height: 1.5rem
+}
+.mjiDsj{
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+.YJU6OK{
+	border-left: 0.5px solid rgba(0,0,0,.26);
+	margin: 0 8px
+}
+.EYwlqO, .lw_xYb{
+	font-size: 16px;
+	line-height: 1.25rem
+}
+.lw_xYb{
+	color: rgba(0,0,0,.54)
+}
+.N_WJUf{
+	white-space: nowrap;
+}
+
+.YziUfM{
+	flex-basis: 40px;
+	justify-content: flex-end;
+}
+.T_oZqJ{
+	background: none;
+	border: 0;
+	color: #08f;
+	outline: none;
+	padding: 4px;
+	white-space: nowrap
+}
+
+button{
+	cursor: pointer;
+	outline: none !important;
+	box-shadow: none !important;
+}
+.We6XvC, .va0awL{
+	color: rgba(0, 0, 0, .54);
+}
+.We6XvC{
+	font-size: 14px;
+	line-height: 1.25rem;
+}
+.OwAhWT{
+	font-weight: 500;
+}
+.E24UKj, .OwAhWT{
+	align-items: center;
+	font-size: 16px;
+}
+.KFu3R3{
+	padding-top:4px;
+}
+.k8tV5Y{
+	border: 1px solid rgba(0,0,0,.26);
+	box-shadow: 0 1px 1px rgba(0,0,0,.03);
+	color: red;
+	font-size: 1rem;
+	height: 28px;
+	line-height: 1.25rem;
+	min-width: 0;
+	padding: 4px 14px;
+	white-space: nowrap
+}
+.vy2yND{
+	margin-top: 3px;
+	flex-wrap: wrap;
+}
+.u6bhpf, .zDPndA{
+	background-color: #fff;
+}
+

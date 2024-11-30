@@ -1,0 +1,201 @@
+<span style="font-family: verdana, geneva, sans-serif;">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>WEB ADMIN</title>
+        <link rel="stylesheet" href="style/style_admin.css" />
+        <link rel="stylesheet" href="style/style_statisticadmin.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+
+        <div class="container">
+            <nav>
+                <div class="navbar">
+                    <a href="index.html" style="color: black;">
+                        <div class="logo">
+                            <img src="image/meoadmin.jpg" alt="">
+                            <h1></h1>
+                        </div>
+                    </a>
+                    <div class="account-type">Tài khoản: Admin</div>
+                    <ul>
+                        <li>
+                            <!-- drop down sidebar -->
+                            <div class="sidenav">
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-user fa-xl"></i>
+                                    <span class="nav-item">Quản lý người dùng </span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="index.html" class="font-bold">Quản lý</a>
+                                    <a href="add_user-admin.html" class="font-bold">Thêm người dùng</a>
+                                </div>
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                    <span class="nav-item">Quản lý đơn hàng </span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="cart-admin.html" class="font-bold">Danh sách đơn</a>
+                                </div>
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-list fa-xl"></i>
+                                    <span class="nav-item">Quản lý sản phẩm </span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="products-admin.html" class="font-bold">Chi tiết sản phẩm</a>
+                                    <a href="add_products-admin.html" class="font-bold">Thêm sản phẩm</a>
+                                </div>
+
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-chart-simple fa-xl"></i>
+                                    <span class="nav-item">Thống kê</span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="user_statistic-admin.html" class="font-bold">Theo khách hàng</a>
+                                    <a href="cart_statistic-admin.html" class="font-bold">Theo đơn hàng</a>
+                                </div>
+
+                                <script>
+                                    var dropdown = document.getElementsByClassName("dropdown-btn");
+                                    var i;
+
+                                    for (i = 0; i < dropdown.length; i++) {
+                                        dropdown[i].addEventListener("click", function () {
+                                            this.classList.toggle("active");
+                                            var dropdownContent = this.nextElementSibling;
+                                            if (dropdownContent.style.display === "block") {
+                                                dropdownContent.style.display = "none";
+                                            } else {
+                                                dropdownContent.style.display = "block";
+                                            }
+                                        });
+                                    }
+                                </script>
+                            </div>
+                        </li>
+                        <li class="bottom">
+                            <a href="#" class="logout" onclick="logOut()">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span class="nav-item">Đăng xuất</span>
+                            </a>
+                            <script>
+                                function logOut() {
+                                    if (confirm('Đăng xuất ?')) {
+                                        alert("Đăng xuất thành công");
+                                        window.location.replace("../web/login.html");
+                                    }
+                                }
+                            </script>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- top banner -->
+            <div class="top-banner">
+                <p>online store</p>
+            </div>
+
+            <section class="main">
+                <div class="main-top"></div>
+                <div class="background-section">
+                    <div class="main-body">
+                        <h1>DOANH SỐ</h1>
+                    </div>
+                    <table style="margin-bottom: 30px; border-collapse:collapse">
+                        <tr>
+                            <th>Số sản phẩm đã bán</th>
+                            <th>Số lượng bán</th>
+                            <th>Tổng tiền</th>
+                        </tr>
+                        <tr>
+                            <td style=" align-items:center; text-align:center; width: 33%">
+                                <img src="image/products.png" alt=""
+                                    style="width: 35px;height:35px;object-fit:cover;margin-left: 0px">
+                                <p style=" padding:10px 15px;">14</p>
+                            </td>
+                            <td style=" align-items:center; text-align:center">
+                                <img src="image/cart.png" alt=""
+                                    style="width: 35px;height:35px;object-fit:cover;margin-left: 0px">
+                                <p style=" padding:10px 15px;">26</p>
+                            </td>
+                            <td style=" align-items:center; text-align:center">
+                                <img src="image/salary.jpg" alt=""
+                                    style="width: 35px;height:35px;object-fit:cover;margin-left: 0px">
+                                <p style=" padding:10px 15px;">5500€</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="background-section">
+                    <div class="main-body">
+                        <h1>THỐNG KÊ</h1>
+                    </div>
+
+                    <table style="border-collapse:collapse">
+                        
+                        <tr>
+                            <th>Mã vận đơn</th>
+                            <th>Số sản phẩm</th>
+                            <th>Tổng tiền</th>
+                            <th>Thông tin</th>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>4</td>
+                            <td>720€</td>
+                            <td>
+                                <a href="chitietdonhang_statistic.html&mvd=14">
+                                    Chi tiết
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>15</td>
+                            <td>2100€</td>
+                            <td>
+                                <a href="chitietdonhang_statistic.html&mvd=15">
+                                    Chi tiết
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>4</td>
+                            <td>1390€</td>
+                            <td>
+                                <a href="chitietdonhang_statistic.html&mvd=16">
+                                    Chi tiết
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>3</td>
+                            <td>1290€</td>
+                            <td>
+                                <a href="chitietdonhang_statistic.html&mvd=17">
+                                    Chi tiết
+                                </a>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    <div style="padding-top: 30px">
+                        <div class='pagination' style='font-size: 20px;'> Trang <a
+                                style='text-decoration: none; padding: 0; min-width: 2.5rem; text-align: center; height: 1.875rem; font-size: 1.25rem; margin-left: .9375rem; margin-right: .9375rem; color: rgba(0,0,0,.4); display: inline; justify-content: center;'
+                                href='?admin=&page=1'>1</a></div>
+                    </div>
+            </section>
+
+        </div>
+    </body>
+
+    </html>

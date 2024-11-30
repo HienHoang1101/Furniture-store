@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB ADMIN</title>
+    <link rel="stylesheet" href="style/style_admin.css" />
+    <link rel="stylesheet" href="style/style_user-info.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script>
+        // Mock user data (dữ liệu giả lập)
+        const users = [
+            {
+                id: 1,
+                name: "Dieu Linh",
+                avatar: "image/meoadmin.jpg",
+                gender: "Nữ",
+                birthdate: "01/01/2004",
+                email: "khongquenef@gmail.com",
+                phone: "094321351",
+                address: "42/12 Hồ Thị Kỉ, P.1, Q.10, TP.HCM",
+                paymentMethod: "Ví điện tử",
+            },
+            // Thêm người dùng khác nếu cần
+        ];
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div id="navbar"></div>
+        <nav>
+            <div class="navbar">
+                <a href="#" id="home-link" style="color: black;">
+                    <div class="logo">
+                        <img src="image/meoadmin.jpg" alt="">
+                        <h1 id="username"></h1>
+                    </div>
+                </a>
+                <div class="account-type">Tài khoản: Admin</div>
+                <ul>
+                    <li>
+                        <!-- drop down sidebar -->
+                        <div class="sidenav">
+                            <button class="dropdown-btn">
+                                <i class="fa-solid fa-user fa-xl"></i>
+                                <span class="nav-item">Quản lý người dùng </span>
+                            </button>
+                            <div class="dropdown-container">
+                                <a href="#" id="manage-users" class="font-bold">Quản lý</a>
+                                <a href="#" id="add-user" class="font-bold">Thêm người dùng</a>
+                            </div>
+                            <button class="dropdown-btn">
+                                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                <span class="nav-item">Quản lý đơn hàng </span>
+                            </button>
+                            <div class="dropdown-container">
+                                <a href="#" id="manage-orders" class="font-bold">Danh sách đơn</a>
+                            </div>
+                            <button class="dropdown-btn">
+                                <i class="fa-solid fa-list fa-xl"></i>
+                                <span class="nav-item">Quản lý sản phẩm </span>
+                            </button>
+                            <div class="dropdown-container">
+                                <a href="#" id="manage-products" class="font-bold">Chi tiết sản phẩm</a>
+                                <a href="#" id="add-products" class="font-bold">Thêm sản phẩm</a>
+                            </div>
+
+                            <button class="dropdown-btn">
+                                <i class="fa-solid fa-chart-simple fa-xl"></i>
+                                <span class="nav-item">Thống kê</span>
+                            </button>
+                            <div class="dropdown-container">
+                                <a href="#" id="user-statistics" class="font-bold">Theo khách hàng</a>
+                                <a href="#" id="order-statistics" class="font-bold">Theo đơn hàng</a>
+                            </div>
+
+                            <script>
+                                document.addEventListener("DOMContentLoaded", () => {
+                                    const dropdowns = document.querySelectorAll(".dropdown-btn");
+                                    dropdowns.forEach(button => {
+                                        button.addEventListener("click", () => {
+                                            const dropdownContent = button.nextElementSibling;
+                                            dropdownContent.style.display =
+                                                dropdownContent.style.display === "block" ? "none" : "block";
+                                        });
+                                    });
+
+                                    // Get username from URL (simulating PHP $_GET['admin'])
+                                    const params = new URLSearchParams(window.location.search);
+                                    const username = params.get("admin") || "Admin";
+                                    document.getElementById("username").textContent = username;
+
+                                    // Update links with username
+                                    const links = {
+                                        "home-link": `index.html?admin=${username}`,
+                                        "manage-users": `index.html?admin=${username}`,
+                                        "add-user": `add_user-admin.html?admin=${username}`,
+                                        "manage-orders": `cart-admin.html?admin=${username}`,
+                                        "manage-products": `products-admin.html?admin=${username}`,
+                                        "add-products": `add_products-admin.html?admin=${username}`,
+                                        "user-statistics": `user_statistic-admin.html?admin=${username}`,
+                                        "order-statistics": `cart_statistic-admin.html?admin=${username}`
+                                    };
+                                    Object.keys(links).forEach(id => {
+                                        document.getElementById(id).href = links[id];
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </li>
+                    <li class="bottom">
+                        <a href="#" class="logout" onclick="logOut()">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="nav-item">Đăng xuất</span>
+                        </a>
+                        <script>
+                            function logOut() {
+                                if (confirm("Đăng xuất ?")) {
+                                    alert("Đăng xuất thành công");
+                                    window.location.replace("../web/login.html");
+                                }
+                            }
+                        </script>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Top banner -->
+        <div class="top-banner">
+            <p>Online Store</p>
+        </div>
+
+        <section class="main">
+            <div class="main-top"></div>
+            <div class="background-section">
+                <div class="main-body">
+                    <h1>THÔNG TIN CHI TIẾT NGƯỜI DÙNG</h1>
+                </div>
+                <div>
+                    <table id="user-table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Họ và tên</th>
+                                <th>Ảnh đại diện</th>
+                                <th>Giới tính</th>
+                                <th>Ngày sinh</th>
+                                <th>Email</th>
+                                <th>SDT</th>
+                                <th>Địa chỉ giao hàng</th>
+                                <th>Phương thức thanh toán</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dữ liệu người dùng sẽ được chèn vào đây -->
+                        </tbody>
+                    </table>
+                    <div class="button-back" title="Quay về trang trước">
+                        <a href="index.html">
+                            <i class="fa-solid fa-backward-step fa-xl" style="color: black;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Render dữ liệu người dùng vào bảng
+        const tableBody = document.querySelector("#user-table tbody");
+
+        users.forEach((user, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+        <td style="text-align: center;">${index + 1}</td>
+        <td style="text-align: center;">${user.name}</td>
+        <td><img src="${user.avatar}" alt="${user.name}" width="80px" height="80px"></td>
+        <td style="text-align: center;">${user.gender}</td>
+        <td>${user.birthdate}</td>
+        <td>${user.email}</td>
+        <td>${user.phone}</td>
+        <td>${user.address}</td>
+        <td style="text-align: center;">${user.paymentMethod}</td>
+      `;
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+
+</html>

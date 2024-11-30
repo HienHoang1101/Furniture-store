@@ -1,0 +1,194 @@
+<span style="font-family: verdana, geneva, sans-serif;">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>WEB ADMIN</title>
+        <link rel="stylesheet" href="style/style_admin.css" />
+        <link rel="stylesheet" href="style/style_edit-useradmin.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+
+        <div class="container">
+            <nav>
+                <div class="navbar">
+                    <a href="index.html" style="color: black;">
+                        <div class="logo">
+                            <img src="image/meoadmin.jpg" alt="">
+                            <h1></h1>
+                        </div>
+                    </a>
+                    <div class="account-type">Tài khoản: Admin</div>
+                    <ul>
+                        <li>
+                            <!-- drop down sidebar -->
+                            <div class="sidenav">
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-user fa-xl"></i>
+                                    <span class="nav-item">Quản lý người dùng </span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="index.html" class="font-bold">Quản lý</a>
+                                    <a href="add_user-admin.html" class="font-bold">Thêm người dùng</a>
+                                </div>
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                    <span class="nav-item">Quản lý đơn hàng </span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="cart-admin.html" class="font-bold">Danh sách đơn</a>
+                                </div>
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-list fa-xl"></i>
+                                    <span class="nav-item">Quản lý sản phẩm </span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="products-admin.html" class="font-bold">Chi tiết sản phẩm</a>
+                                    <a href="add_products-admin.html" class="font-bold">Thêm sản phẩm</a>
+                                </div>
+
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-chart-simple fa-xl"></i>
+                                    <span class="nav-item">Thống kê</span>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="user_statistic-admin.html" class="font-bold">Theo khách hàng</a>
+                                    <a href="cart_statistic-admin.html" class="font-bold">Theo đơn hàng</a>
+                                </div>
+
+                                <script>
+                                    var dropdown = document.getElementsByClassName("dropdown-btn");
+                                    var i;
+
+                                    for (i = 0; i < dropdown.length; i++) {
+                                        dropdown[i].addEventListener("click", function () {
+                                            this.classList.toggle("active");
+                                            var dropdownContent = this.nextElementSibling;
+                                            if (dropdownContent.style.display === "block") {
+                                                dropdownContent.style.display = "none";
+                                            } else {
+                                                dropdownContent.style.display = "block";
+                                            }
+                                        });
+                                    }
+                                </script>
+                            </div>
+                        </li>
+                        <li class="bottom">
+                            <a href="#" class="logout" onclick="logOut()">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span class="nav-item">Đăng xuất</span>
+                            </a>
+                            <script>
+                                function logOut() {
+                                    if (confirm('Đăng xuất ?')) {
+                                        alert("Đăng xuất thành công");
+                                        window.location.replace("../web/login.html");
+                                    }
+                                }
+                            </script>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- top banner -->
+            <div class="top-banner">
+                <p>online store</p>
+            </div>
+
+            <section class="main">
+
+                <div class="main-top"></div>
+                <div class="background-section">
+                    <div class="main-body">
+                        <h1>CẬP NHẬT THÔNG TIN NGƯỜI DÙNG</h1>
+                    </div>
+
+                    <br>
+
+                    <form method="POST" action="">
+                        <table>
+                            <tr>
+                                <th>Họ</th>
+                                <th>Tên</th>
+                                <th>Số điện thoại</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder="Nhập họ" value="a" name="ho" required>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Nhập tên" value="aa" name="ten" required>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Nhập số điện thoại" value="123" required
+                                        name="phone">
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <th>Địa chỉ Email</th>
+                                <th>Giới tính</th>
+                                <th>Ngày sinh</th>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input required type="text" placeholder="Nhập Email" value="hienhoang1024@gmail.com"
+                                        name="email">
+                                </td>
+                                <td>
+                                    <select name="sex" required>
+                                        <option value="0">
+                                        <option value="1">Nam</option>
+                                        <option value="2">Nữ</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="date" name="date" required value="0000-00-00">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>Đổi mật khẩu</th>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="password" placeholder="Nhập mật khẩu mới" name="new_password"
+                                        value="123">
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="reset-form">
+                            <label class="buttonReset" for="buttonreset" onclick="window.location.href='edit_user-admin.html' +
+                               'admin='
+                               + '&user=' + aaa">
+                                Reset</label>
+                        </div>
+
+                        <div class="submit-form">
+                            <input type="submit" id="buttonsubmit" name="submit" style="display: none;">
+                            <label class="buttonsubmit" for="buttonsubmit">Cập nhật</label>
+                        </div>
+                    </form>
+
+                    <div class="button-back" title="Quay về trang trước">
+                        <a href="index.html">
+                            <i class="fa-solid fa-backward-step fa-xl" style="color: black;"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </body>
+
+    </html>

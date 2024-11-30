@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>WEB ADMIN</title>
+  <link rel="stylesheet" href="style/style_admin.css" />
+  <link rel="stylesheet" href="style/style_addproducts.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="navbar">
+        <a href="index." style="color: black;">
+          <div class="logo">
+            <img src="image/meoadmin.jpg" alt="">
+            <h1></h1>
+          </div>
+        </a>
+        <div class="account-type">Tài khoản: Admin</div>
+        <ul>
+          <li>
+            <!-- drop down sidebar -->
+            <div class="sidenav">
+              <button class="dropdown-btn">
+                <i class="fa-solid fa-user fa-xl"></i>
+                <span class="nav-item">Quản lý người dùng </span>
+              </button>
+              <div class="dropdown-container">
+                <a href="index.html" class="font-bold">Quản lý</a>
+                <a href="add_user-admin.html" class="font-bold">Thêm người dùng</a>
+              </div>
+              <button class="dropdown-btn">
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                <span class="nav-item">Quản lý đơn hàng </span>
+              </button>
+              <div class="dropdown-container">
+                <a href="cart-admin.html" class="font-bold">Danh sách đơn</a>
+              </div>
+              <button class="dropdown-btn">
+                <i class="fa-solid fa-list fa-xl"></i>
+                <span class="nav-item">Quản lý sản phẩm </span>
+              </button>
+              <div class="dropdown-container">
+                <a href="products-admin.html" class="font-bold">Chi tiết sản phẩm</a>
+                <a href="add_products-admin.html" class="font-bold">Thêm sản phẩm</a>
+              </div>
+
+              <button class="dropdown-btn">
+                <i class="fa-solid fa-chart-simple fa-xl"></i>
+                <span class="nav-item">Thống kê</span>
+              </button>
+              <div class="dropdown-container">
+                <a href="user_statistic-admin.html" class="font-bold">Theo khách hàng</a>
+                <a href="cart_statistic-admin.html" class="font-bold">Theo đơn hàng</a>
+              </div>
+
+              <script>
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+                var i;
+
+                for (i = 0; i < dropdown.length; i++) {
+                  dropdown[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                      dropdownContent.style.display = "none";
+                    } else {
+                      dropdownContent.style.display = "block";
+                    }
+                  });
+                }
+              </script>
+            </div>
+          </li>
+          <li class="bottom">
+            <a href="#" class="logout" onclick="logOut()">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Đăng xuất</span>
+            </a>
+            <script>
+              function logOut() {
+                if (confirm('Đăng xuất ?')) {
+                  alert("Đăng xuất thành công");
+                  window.location.replace("../web/login.html");
+                }
+              }
+            </script>
+          </li>
+        </ul>
+      </div>
+    </nav> <!-- top banner -->
+    <div class="top-banner">
+      <p>Online store</p>
+    </div>
+    <section class="main">
+      <div class="main-top"></div>
+      <div class="background-section">
+        <div class="main-body">
+          <h1>THÊM SẢN PHẨM</h1>
+        </div>
+        <form method="POST" action="" autocomplete="on" enctype="multipart/form-data">
+          <table>
+            <tr>
+              <th>ID SẢN PHẨM</th>
+              <th>TÊN SẢN PHẨM</th>
+              <th>LOẠI SẢN PHẨM</th>
+            </tr>
+            <tr>
+              <td><input name="id_sp" id="" type="text" placeholder="Nhập mã sản phẩm" required></td>
+              <td><input name="tensp" type="text" placeholder="Nhập tên sản phẩm" required></td>
+              <td>
+                <select name="id_danhmuc" class='form-control'>
+                  <option value="1">GIƯỜNG</option>
+                  <option value="2">GHẾ</option>
+                  <option value="3">BÀN</option>
+                  <option value="4">GƯƠNG</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>GIÁ</th>
+              <th>MÔ TẢ NGẮN</th>
+              <th>MÔ TẢ CHI TIẾT</th>
+            </tr>
+            <tr>
+              <td><input name="gia" type="text" placeholder="Nhập giá" required></td>
+              <td><input type="text" name="motangan" placeholder="Mô tả ngắn" required></td>
+              <td><textarea type="text" placeholder="Mô tả chi tiết" name="motachitiet" required rows="5"
+                  cols="50"></textarea></td>
+            </tr>
+            <tr>
+              <th>Ảnh sản phẩm</th>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <input required type="file" accept=".jpg,.jpeg,.png" name="image_sp" id="file-input">
+                <div style="margin-left: 350px;">
+                  <img id="img-preview" style="width: 30%; margin-top: 40px" src="" />
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="reset-form">
+            <label class="buttonReset" for="buttonreset"
+              onclick="window.location.replace('add_user-admin.')">Reset</label>
+          </div>
+          <div class="submit-form">
+            <input type="submit" id="buttonsubmit" name="submit" style="display: none;">
+            <label class="buttonsubmit" for="buttonsubmit">Thêm</label>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <script>
+    const input = document.getElementById('file-input');
+    const image = document.getElementById('img-preview');
+
+    input.addEventListener('change', (e) => {
+      if (e.target.files.length) {
+        const src = URL.createObjectURL(e.target.files[0]);
+        image.src = src;
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+.carousel {
+    margin-bottom: 4rem;
+  }
+  
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+  }
+  
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 42rem;
+  }
+  
+  .carousel-item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 35rem;
+
+  }
+
+  .text-banner{
+    color: white;
+
+  }
+  #myCarousel{
+    padding-top: 30px;
+  }

@@ -1,0 +1,88 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #343a40;
+  position:fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100000;
+}
+
+.topnav a{
+  float: left;
+  display: block;
+  color: rgb(200, 200, 200);
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: #343a40;
+}
+
+/*.topnav a:hover{*/
+/*  color: #000000;*/
+/*  background-color: #ffffff;*/
+/*}*/
+
+.topnav:hover a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.topnav a.active {
+  background-color:black ;
+  color: white ;
+  text-decoration: none;
+}
+
+.topnav .search-container {
+  float: left ;
+  margin-left: 20%;
+}
+
+.topnav input[type=text] {
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 300px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+button[type=submit] {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 10px 10px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+/* đăng xuất */
+.dangxuat, .dangnhap{
+  float: right;
+  margin-right: 10px;
+}
+
+.active{
+  color: white ;
+}
+
+

@@ -1,0 +1,106 @@
+/*-------team-------*/
+#team
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: #555;
+	
+	
+}
+
+h1
+{
+	text-align: center;
+	color: #555;
+}
+
+h1::after
+{
+	content:'';
+	background: #007bff;
+	display: block;
+	height: 3px;
+	width: 170px;
+	margin: 20px auto 0px ;
+}
+
+.profile-pic .img-box
+{
+	opacity: 1;
+	display: block;
+	position: relative;
+	
+}
+
+.profile-pic .img-box img
+{
+	filter: grayscale(0);
+	
+}
+
+.profile-pic .img-box img:hover
+{
+	filter: grayscale(20);
+}
+
+.profile-pic h2
+{
+	font-size: 22px;
+	font-weight: bold;
+	margin-top:15px;
+	color: #007bff!important;
+}
+
+.profile-pic h3
+{
+	font-size: 15px;
+	font-weight: bold;
+	margin-top:15px;
+	color: black;
+	
+}
+
+#team .fa
+{
+	height:35px;
+	width: 35px;
+	color: #fff !important;
+	background: #fff;
+	padding: 9px;
+	border-radius: 50%;
+	background-color: black;
+}
+
+.img-box ul
+{
+	padding: 15px 0;
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+}
+
+.img-box ul li
+{
+	padding: 5px;
+	display: inline-block;
+}
+
+.img-box:hover ul
+{
+	opacity: 1;
+	
+}
+
+.img-box ul, .img-box ul
+{
+	transition: 0.5s;
+}
+
+.img-responsive
+{
+	height: 250px;
+	width: 300px;
+}

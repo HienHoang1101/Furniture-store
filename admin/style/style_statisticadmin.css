@@ -1,0 +1,62 @@
+table,th,td{
+    border: solid 1px black;
+}
+table{
+    width: 90%;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 5%;
+}
+
+td, th{
+    padding: 10px;
+}
+
+/* Tìm kiếm */
+.form-search{
+    padding: 15px;
+    background-color: #343a40;
+}
+.h5-search{
+    font-size: 20px;
+    margin-bottom: 2%;
+    color: white;
+}
+.select{
+    padding: 10px 0 10px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: white;
+}
+.button{
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.button:hover{
+    cursor: pointer;
+}
+input.select{
+    margin-left: 5px;
+}
+.time{
+    color: white;
+    font-size: 20px;
+}
+
+
+/*  */
+.background-section{
+    padding-bottom: 3% ;
+
+}
+img{
+    width: 50px;
+    border-radius: 50%;
+}
+.name{
+    display: inline-block;
+}

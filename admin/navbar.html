@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin </title>
+
+    <link rel="stylesheet" href="style/style_admin.css" />
+    <link rel="stylesheet" href="style/style_useradmin.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="#" id="home-link" style="color: black;">
+                <div class="logo">
+                    <img src="image/meoadmin.jpg" alt="">
+                    <h1 id="username"></h1>
+                </div>
+            </a>
+            <div class="account-type">Tài khoản: Admin</div>
+            <ul>
+                <li>
+                    <!-- drop down sidebar -->
+                    <div class="sidenav">
+                        <button class="dropdown-btn">
+                            <i class="fa-solid fa-user fa-xl"></i>
+                            <span class="nav-item">Quản lý người dùng </span>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#" id="manage-users" class="font-bold">Quản lý</a>
+                            <a href="#" id="add-user" class="font-bold">Thêm người dùng</a>
+                        </div>
+                        <button class="dropdown-btn">
+                            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                            <span class="nav-item">Quản lý đơn hàng </span>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#" id="manage-orders" class="font-bold">Danh sách đơn</a>
+                        </div>
+                        <button class="dropdown-btn">
+                            <i class="fa-solid fa-list fa-xl"></i>
+                            <span class="nav-item">Quản lý sản phẩm </span>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#" id="manage-products" class="font-bold">Chi tiết sản phẩm</a>
+                            <a href="#" id="add-products" class="font-bold">Thêm sản phẩm</a>
+                        </div>
+
+                        <button class="dropdown-btn">
+                            <i class="fa-solid fa-chart-simple fa-xl"></i>
+                            <span class="nav-item">Thống kê</span>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#" id="user-statistics" class="font-bold">Theo khách hàng</a>
+                            <a href="#" id="order-statistics" class="font-bold">Theo đơn hàng</a>
+                        </div>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const dropdowns = document.querySelectorAll(".dropdown-btn");
+                                dropdowns.forEach(button => {
+                                    button.addEventListener("click", () => {
+                                        const dropdownContent = button.nextElementSibling;
+                                        dropdownContent.style.display =
+                                            dropdownContent.style.display === "block" ? "none" : "block";
+                                    });
+                                });
+
+                                // Get username from URL (simulating PHP $_GET['admin'])
+                                const params = new URLSearchParams(window.location.search);
+                                const username = params.get("admin") || "Admin";
+                                document.getElementById("username").textContent = username;
+
+                                // Update links with username
+                                const links = {
+                                    "home-link": `index.html?admin=${username}`,
+                                    "manage-users": `index.html?admin=${username}`,
+                                    "add-user": `add_user-admin.html?admin=${username}`,
+                                    "manage-orders": `cart-admin.html?admin=${username}`,
+                                    "manage-products": `products-admin.html?admin=${username}`,
+                                    "add-products": `add_products-admin.html?admin=${username}`,
+                                    "user-statistics": `user_statistic-admin.html?admin=${username}`,
+                                    "order-statistics": `cart_statistic-admin.html?admin=${username}`
+                                };
+                                Object.keys(links).forEach(id => {
+                                    document.getElementById(id).href = links[id];
+                                });
+                            });
+                        </script>
+                    </div>
+                </li>
+                <li class="bottom">
+                    <a href="#" class="logout" onclick="logOut()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-item">Đăng xuất</span>
+                    </a>
+                    <script>
+                        function logOut() {
+                            if (confirm("Đăng xuất ?")) {
+                                alert("Đăng xuất thành công");
+                                window.location.replace("../web/login.html");
+                            }
+                        }
+                    </script>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
