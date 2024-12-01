@@ -38,9 +38,9 @@ nav{
   display: flex;
   align-items: center;
   background-color: #343a40;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  border-radius: 5px;
   color: white;
+  padding-top: 5px;
 }
 .account-type{
   padding: 5px;

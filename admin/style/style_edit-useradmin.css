@@ -62,14 +62,14 @@ img.avatar{
     border-radius: 10px;
     cursor: pointer;
 }
-.submit-form, .reset-form{
+.submit-form, .reset-form,#buttonsubmit{
     display:inline-block;
     padding-left: 15px;
     font-weight: bold;
     color: rgb(222, 222, 222);
     margin-top: 15px;
 }
-.submit-form:hover, .reset-form:hover{
+.submit-form:hover, .reset-form:hover,#buttonsubmit:hover{
     color: white;
 }
 .reset-form, .submit-form{

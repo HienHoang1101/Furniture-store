@@ -13,6 +13,7 @@ th:not(.mavandon):not(th.name):not(th.address):not(th.sdt){
     color: #dfdfdf;
     border: solid 1px white;
 }
+
 th,td{
     padding-top: 20px;
     padding-bottom: 30px;
@@ -82,6 +83,23 @@ td.vanchuyen{
 .background-section{
     padding-bottom: 2.5%;
 }
+
+
+/* ô khác */
+.chitiet{
+    width: 10%;
+    text-align: center;
+}
+a[href='chitietdonhang-admin14.html']{
+    color: red;
+}
+a[href='chitietdonhang-admin14.html']:hover
+{
+    color: red;
+    font-weight: bold;
+}
+
+
 /*o ten*/
 th.name, th.address, th.sdt{
     background-color: rgb(236, 236, 236);
@@ -207,3 +225,7 @@ input.select{
     position: relative;
 }
 
+/* Nut xac nhan */
+button[name='update']{
+    background-color: none;
+}

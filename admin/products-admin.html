@@ -1,572 +1,141 @@
-<span style="font-family: verdana, geneva, sans-serif;">
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WEB ADMIN</title>
+    <link rel="stylesheet" href="style/style_admin.css" />
+    <link rel="stylesheet" href="style/style_product-admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
 
-    <head>
-        <title>WEB ADMIN</title>
-        <link rel="stylesheet" href="style/style_admin.css" />
-        <link rel="stylesheet" href="style/style_cartadmin.css" />
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-            integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    </head>
-
-    <body>
-        <div class="container">
-            <nav>
-                <div class="navbar">
-                    <a href="index.html" style="color: black;">
-                        <div class="logo">
-                            <img src="image/meoadmin.jpg" alt="">
-                            <h1></h1>
-                        </div>
-                    </a>
-                    <div class="account-type">Tài khoản: Admin</div>
-                    <ul>
-                        <li>
-                            <!-- drop down sidebar -->
-                            <div class="sidenav">
-                                <button class="dropdown-btn">
-                                    <i class="fa-solid fa-user fa-xl"></i>
-                                    <span class="nav-item">Quản lý người dùng </span>
-                                </button>
-                                <div class="dropdown-container">
-                                    <a href="index." class="font-bold">Quản lý</a>
-                                    <a href="add_user-admin.html" class="font-bold">Thêm người dùng</a>
-                                </div>
-                                <button class="dropdown-btn">
-                                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
-                                    <span class="nav-item">Quản lý đơn hàng </span>
-                                </button>
-                                <div class="dropdown-container">
-                                    <a href="cart-admin.html" class="font-bold">Danh sách đơn</a>
-                                </div>
-                                <button class="dropdown-btn">
-                                    <i class="fa-solid fa-list fa-xl"></i>
-                                    <span class="nav-item">Quản lý sản phẩm </span>
-                                </button>
-                                <div class="dropdown-container">
-                                    <a href="products-admin.html" class="font-bold">Chi tiết sản phẩm</a>
-                                    <a href="add_products-admin.html" class="font-bold">Thêm sản phẩm</a>
-                                </div>
-
-                                <button class="dropdown-btn">
-                                    <i class="fa-solid fa-chart-simple fa-xl"></i>
-                                    <span class="nav-item">Thống kê</span>
-                                </button>
-                                <div class="dropdown-container">
-                                    <a href="user_statistic-admin.html" class="font-bold">Theo khách hàng</a>
-                                    <a href="cart_statistic-admin.html" class="font-bold">Theo đơn hàng</a>
-                                </div>
-
-                                <script>
-                                    var dropdown = document.getElementsByClassName("dropdown-btn");
-                                    var i;
-
-                                    for (i = 0; i < dropdown.length; i++) {
-                                        dropdown[i].addEventListener("click", function () {
-                                            this.classList.toggle("active");
-                                            var dropdownContent = this.nextElementSibling;
-                                            if (dropdownContent.style.display === "block") {
-                                                dropdownContent.style.display = "none";
-                                            } else {
-                                                dropdownContent.style.display = "block";
-                                            }
-                                        });
-                                    }
-                                </script>
+<body>
+    <div class="container">
+        <nav>
+            <div class="navbar">
+                <a href="index.html" style="color: black;">
+                    <div class="logo">
+                      <a href="user-info.html"><img src="image/meoadmin.jpg" alt=""> </a>
+                        <h1>Admin</h1>
+                    </div>
+                </a>
+                <ul>
+                    <li>
+                        <!-- drop down sidebar -->
+                        <div class="sidenav">
+                            <button class="dropdown-btn">
+                                <i class="fa-solid fa-user fa-xl"></i>
+                                <span class="nav-item">Quản lý người dùng </span>
+                            </button>
+                            <div class="dropdown-container">
+                                <a href="index.html" class="font-bold">Quản lý</a>
+                                <a href="add_user-admin.html" class="font-bold">Thêm người dùng</a>
                             </div>
-                        </li>
-                        <li class="bottom">
-                            <a href="#" class="logout" onclick="logOut()">
-                                <i class="fas fa-sign-out-alt"></i>
-                                <span class="nav-item">Đăng xuất</span>
-                            </a>
+                            <button class="dropdown-btn">
+                                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                <span class="nav-item">Quản lý đơn hàng </span>
+                            </button>
+                            <div class="dropdown-container">
+                                <a href="cart-admin.html" class="font-bold">Danh sách đơn</a>
+                            </div>
+                            <button class="dropdown-btn">
+                                <i class="fa-solid fa-list fa-xl"></i>
+                                <span class="nav-item">Quản lý sản phẩm </span>
+                            </button>
+                            <div class="dropdown-container">
+                                <a href="products-admin.html" class="font-bold">Chi tiết sản phẩm</a>
+                                <a href="add_products-admin.html" class="font-bold">Thêm sản phẩm</a>
+                            </div>
+
+                            <button class="dropdown-btn">
+                                <i class="fa-solid fa-chart-simple fa-xl"></i>
+                                <span class="nav-item">Thống kê</span>
+                            </button>
+                            <div class="dropdown-container">
+                                <a href="user_statistic-admin.html" class="font-bold">Theo khách hàng</a>
+                                <a href="cart_statistic-admin.html" class="font-bold">Theo đơn hàng</a>
+                            </div>
+
                             <script>
-                                function logOut() {
-                                    if (confirm('Đăng xuất ?')) {
-                                        alert("Đăng xuất thành công");
-                                        window.location.replace("../web/login.html");
-                                    }
+                                var dropdown = document.getElementsByClassName("dropdown-btn");
+                                var i;
+
+                                for (i = 0; i < dropdown.length; i++) {
+                                    dropdown[i].addEventListener("click", function () {
+                                        this.classList.toggle("active");
+                                        var dropdownContent = this.nextElementSibling;
+                                        if (dropdownContent.style.display === "block") {
+                                            dropdownContent.style.display = "none";
+                                        } else {
+                                            dropdownContent.style.display = "block";
+                                        }
+                                    });
                                 }
                             </script>
-                        </li>
-                    </ul>
-                </div>
-            </nav> <!-- top banner -->
-            <div class="top-banner">
-                <p>Online store</p>
+                        </div>
+                    </li>
+                    <li class="bottom">
+                        <a href="#" class="logout" onclick="logOut()">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="nav-item">Đăng xuất</span>
+                        </a>
+                        <script>
+                            function logOut() {
+                                if (confirm('Đăng xuất ?')) {
+                                    alert("Đăng xuất thành công");
+                                    window.location.replace("../user/login.html");
+                                }
+                            }
+                        </script>
+                    </li>
+                </ul>
             </div>
+        </nav>
 
-            <section class="main">
-                <div class="main-top"></div>
-                <div class="background-section">
-                    <div class="main-body">
-                        <h1>TÌM KIẾM ĐƠN HÀNG</h1>
-                    </div>
-                    <form action="" class="form-search" method="get">
-                        <h5 class="h5-search">- - Tìm kiếm - -</h5>
-                        <input type="hidden" name="admin" value="">
-
-                        <!--    tim kiem theo thoi gian nhan hang    -->
-                        <div class="date-search-cart-admin">
-                            <label for="" class="label">Từ ngày:</label>
-                            <input type="date" name="from-date" class="select">
-                            <label for="" class="label">Đến ngày:</label>
-                            <input type="date" class="select" name="to-date">
-                        </div>
-
-                        <!--    tim kiem theo dia chi    -->
-                        <div class="address-search-cart-admin">
-                            <input class="label2" type="text" name="city" placeholder="Tỉnh thành phố">
-                            <input class="label3" type="text" name="district" placeholder="Quận huyện">
-                        </div>
-                        <!--    Tim kiem theo tinh trang don hang    -->
-                        <div class="abcde">
-                            <label for="" class="label">Tình trạng đơn hàng</label>
-                            <select name="donhang">
-                                <option value="">--Chọn--</option>
-                                <option value="1">Chưa xác nhận</option>
-                                <option value="2">Xác nhận</option>
-                                <option value="3">Giao thành công</option>
-                                <option value="4">Hủy đơn</option>
-                            </select>
-                        </div>
-                        <div class="nut-loc-va-reset">
-                            <input type="submit" name="search" id="submitbutton" style="display: none">
-                            <label for="submitbutton">
-                                <span class="button">Lọc</span>
-                            </label>
-                            <input type="submit" id="resetbutton" name="reset" class="button" value="Reset">
-                        </div>
-                    </form>
-                </div>
-                <div class="background-section">
-                    <div class="main-body">
-                        <h1>QUẢN LÝ ĐƠN HÀNG</h1>
-                    </div>
-                    <table class="table-main">
-                        <tr class="tr-main">
-                            <th class="sanpham" colspan="2">Sản phẩm</th>
-                            <th class="doanhthu">Tổng tiền</th>
-                            <th class="vanchuyen">Phương thức thanh toán</th>
-                            <th class="thoigian">Thời gian nhận hàng (dự kiến)</th>
-                            <th class="trangthai">Trạng thái</th>
-                            <th class="thaotac" colspan="2">Cập nhật tình trạng đơn</th>
-                        </tr>
-                    </table>
-                    <table class="table-data">
-                        <tr class="tr-data">
-                            <th class="mavandon" colspan="8">
-                                Mã vận đơn: 14 </th>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                BÀN GỖ SỒI </td>
-                            <td class="soluong">Số lượng: x1</td>
-                            <td class="doanhthu" rowspan="4">
-                                720€ </td>
-                            <td class="vanchuyen" rowspan="4">
-                                Thanh toán khi nhận hàng </td>
-                            <td class="date" rowspan="4">2000-10-30</td>
-                            <td class="trangthai" rowspan="4">
-                                Đơn giao thành công </td>
-                            <form method="post">
-                                <td class="option" rowspan="4">
-                                    <select name="selection">
-                                        <option value="">--Chọn--</option>
-                                        <option value="1">Chưa xác nhận</option>
-                                        <option value="2">Xác nhận</option>
-                                        <option value="3">Giao thành công</option>
-                                        <option value="4">Hủy đơn</option>
-                                    </select>
-                                </td>
-                                <td class="capnhat" rowspan="4">
-                                    <input type="hidden" name="username" value="1">
-                                    <input type="hidden" name="id_mvd" value="14">
-                                    <input type="submit" name="update" value="Cập nhật">
-                                </td>
-                            </form>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                SOFA LOẠI TỐT </td>
-                            <td class="soluong">Số lượng: x1</td>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                BÀN KÍNH </td>
-                            <td class="soluong">Số lượng: x1</td>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                BÀN VĂN PHÒNG </td>
-                            <td class="soluong">Số lượng: x1</td>
-                        </tr>
-                        <tr>
-                            <th class="name">Tên</th>
-                            <th class="sdt">Số điện thoại</th>
-                            <th colspan="6" class="address">Địa chỉ</th>
-                        </tr>
-                        <tr>
-                            <td class="name">
-                                Dieu Linh </td>
-                            <td class="sdt">
-                                03452951211 </td>
-                            <td colspan="6" class="address">
-                                273 An Duong Vuong, P.3, Q.5, TP.HCM  </td>
-                        </tr>
-                    </table>
-
-                    <table class="table-data">
-                        <tr class="tr-data">
-                            <th class="mavandon" colspan="8">
-                                Mã vận đơn: 15 </th>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                SOFA LOẠI TỐT </td>
-                            <td class="soluong">Số lượng: x1</td>
-                            <td class="doanhthu" rowspan="3">
-                                2100€ </td>
-                            <td class="vanchuyen" rowspan="3">
-                                Ví điện tử </td>
-                            <td class="date" rowspan="3">2000-10-30</td>
-                            <td class="trangthai" rowspan="3">
-                                Đơn giao thành công </td>
-                            <form method="post">
-                                <td class="option" rowspan="3">
-                                    <select name="selection">
-                                        <option value="">--Chọn--</option>
-                                        <option value="1">Chưa xác nhận</option>
-                                        <option value="2">Xác nhận</option>
-                                        <option value="3">Giao thành công</option>
-                                        <option value="4">Hủy đơn</option>
-                                    </select>
-                                </td>
-                                <td class="capnhat" rowspan="3">
-                                    <input type="hidden" name="username" value="1">
-                                    <input type="hidden" name="id_mvd" value="15">
-                                    <input type="submit" name="update" value="Cập nhật">
-                                </td>
-                            </form>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                GƯƠNG MẶT TRỜI </td>
-                            <td class="soluong">Số lượng: x9</td>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                BÀN KÍNH </td>
-                            <td class="soluong">Số lượng: x5</td>
-                        </tr>
-                        <tr>
-                            <th class="name">Tên</th>
-                            <th class="sdt">Số điện thoại</th>
-                            <th colspan="6" class="address">Địa chỉ</th>
-                        </tr>
-                        <tr>
-                            <td class="name">
-                               Thu Hien </td>
-                            <td class="sdt">
-                                0345295121 </td>
-                            <td colspan="6" class="address">
-                                273 An Duong Vuong, P.3, Q.5, TP.HCM </td>
-                        </tr>
-                    </table>
-
-                    <table class="table-data">
-                        <tr class="tr-data">
-                            <th class="mavandon" colspan="8">
-                                Mã vận đơn: 16 </th>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                BÀN GỖ SỒI </td>
-                            <td class="soluong">Số lượng: x1</td>
-                            <td class="doanhthu" rowspan="4">
-                                1390€ </td>
-                            <td class="vanchuyen" rowspan="4">
-                                Ví điện tử </td>
-                            <td class="date" rowspan="4">2024-05-10</td>
-                            <td class="trangthai" rowspan="4">
-                                Đơn giao thành công </td>
-                            <form method="post">
-                                <td class="option" rowspan="4">
-                                    <select name="selection">
-                                        <option value="">--Chọn--</option>
-                                        <option value="1">Chưa xác nhận</option>
-                                        <option value="2">Xác nhận</option>
-                                        <option value="3">Giao thành công</option>
-                                        <option value="4">Hủy đơn</option>
-                                    </select>
-                                </td>
-                                <td class="capnhat" rowspan="4">
-                                    <input type="hidden" name="username" value="1">
-                                    <input type="hidden" name="id_mvd" value="16">
-                                    <input type="submit" name="update" value="Cập nhật">
-                                </td>
-                            </form>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                SOFA LOẠI TỐT </td>
-                            <td class="soluong">Số lượng: x1</td>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                GƯỜNG LUXURY </td>
-                            <td class="soluong">Số lượng: x1</td>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                GƯƠNG MẶT TRỜI </td>
-                            <td class="soluong">Số lượng: x1</td>
-                        </tr>
-                        <tr>
-                            <th class="name">Tên</th>
-                            <th class="sdt">Số điện thoại</th>
-                            <th colspan="6" class="address">Địa chỉ</th>
-                        </tr>
-                        <tr>
-                            <td class="name">
-                                Dieu Linh </td>
-                            <td class="sdt">
-                                0345295121 </td>
-                            <td colspan="6" class="address">
-                                273 An Duong Vuong, P.3, Q.5, TP.HCM </td>
-                        </tr>
-                    </table>
-
-                    <table class="table-data">
-                        <tr class="tr-data">
-                            <th class="mavandon" colspan="8">
-                                Mã vận đơn: 17 </th>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                BÀN GỖ SỒI </td>
-                            <td class="soluong">Số lượng: x1</td>
-                            <td class="doanhthu" rowspan="3">
-                                1290€ </td>
-                            <td class="vanchuyen" rowspan="3">
-                                Thanh toán khi nhận hàng </td>
-                            <td class="date" rowspan="3">2024-05-10</td>
-                            <td class="trangthai" rowspan="3">
-                                Đơn giao thành công </td>
-                            <form method="post">
-                                <td class="option" rowspan="3">
-                                    <select name="selection">
-                                        <option value="">--Chọn--</option>
-                                        <option value="1">Chưa xác nhận</option>
-                                        <option value="2">Xác nhận</option>
-                                        <option value="3">Giao thành công</option>
-                                        <option value="4">Hủy đơn</option>
-                                    </select>
-                                </td>
-                                <td class="capnhat" rowspan="3">
-                                    <input type="hidden" name="username" value="test2">
-                                    <input type="hidden" name="id_mvd" value="17">
-                                    <input type="submit" name="update" value="Cập nhật">
-                                </td>
-                            </form>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                SOFA LOẠI TỐT </td>
-                            <td class="soluong">Số lượng: x1</td>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                GƯỜNG LUXURY </td>
-                            <td class="soluong">Số lượng: x1</td>
-                        </tr>
-                        <tr>
-                            <th class="name">Tên</th>
-                            <th class="sdt">Số điện thoại</th>
-                            <th colspan="6" class="address">Địa chỉ</th>
-                        </tr>
-                        <tr>
-                            <td class="name">
-                               Nguyen</td>
-                            <td class="sdt">
-                                034623612 </td>
-                            <td colspan="6" class="address">
-                                273 An Duong Vuong, P.3, Q.5, TP.HCM  </td>
-                        </tr>
-                    </table>
-
-                    <table class="table-data">
-                        <tr class="tr-data">
-                            <th class="mavandon" colspan="8">
-                                Mã vận đơn: 18 </th>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                BÀN GỖ SỒI </td>
-                            <td class="soluong">Số lượng: x1</td>
-                            <td class="doanhthu" rowspan="3">
-                                1390€ </td>
-                            <td class="vanchuyen" rowspan="3">
-                                Thanh toán khi nhận hàng </td>
-                            <td class="date" rowspan="3">2024-05-18</td>
-                            <td class="trangthai" rowspan="3">
-                                Đơn chưa xác nhận </td>
-                            <form method="post">
-                                <td class="option" rowspan="3">
-                                    <select name="selection">
-                                        <option value="">--Chọn--</option>
-                                        <option value="1">Chưa xác nhận</option>
-                                        <option value="2">Xác nhận</option>
-                                        <option value="3">Giao thành công</option>
-                                        <option value="4">Hủy đơn</option>
-                                    </select>
-                                </td>
-                                <td class="capnhat" rowspan="3">
-                                    <input type="hidden" name="username" value="1">
-                                    <input type="hidden" name="id_mvd" value="18">
-                                    <input type="submit" name="update" value="Cập nhật">
-                                </td>
-                            </form>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                GƯỜNG LUXURY </td>
-                            <td class="soluong">Số lượng: x1</td>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                SOFA TRẮNG TINH TẾ </td>
-                            <td class="soluong">Số lượng: x1</td>
-                        </tr>
-                        <tr>
-                            <th class="name">Tên</th>
-                            <th class="sdt">Số điện thoại</th>
-                            <th colspan="6" class="address">Địa chỉ</th>
-                        </tr>
-                        <tr>
-                            <td class="name">
-                             NGuyen Van A </td>
-                            <td class="sdt">
-                                0345295121 </td>
-                            <td colspan="6" class="address">
-                                tan phu, đồng nai, Vietnam </td>
-                        </tr>
-                    </table>
-
-                    <table class="table-data">
-                        <tr class="tr-data">
-                            <th class="mavandon" colspan="8">
-                                Mã vận đơn: 19 </th>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                GIƯỜNG THÔNG MINH </td>
-                            <td class="soluong">Số lượng: x1</td>
-                            <td class="doanhthu" rowspan="1">
-                                500€ </td>
-                            <td class="vanchuyen" rowspan="1">
-                                Thanh toán khi nhận hàng </td>
-                            <td class="date" rowspan="1">2024-05-19</td>
-                            <td class="trangthai" rowspan="1">
-                                Đơn chưa xác nhận </td>
-                            <form method="post">
-                                <td class="option" rowspan="1">
-                                    <select name="selection">
-                                        <option value="">--Chọn--</option>
-                                        <option value="1">Chưa xác nhận</option>
-                                        <option value="2">Xác nhận</option>
-                                        <option value="3">Giao thành công</option>
-                                        <option value="4">Hủy đơn</option>
-                                    </select>
-                                </td>
-                                <td class="capnhat" rowspan="1">
-                                    <input type="hidden" name="username" value="1">
-                                    <input type="hidden" name="id_mvd" value="19">
-                                    <input type="submit" name="update" value="Cập nhật">
-                                </td>
-                            </form>
-                        </tr>
-                        <tr>
-                            <th class="name">Tên</th>
-                            <th class="sdt">Số điện thoại</th>
-                            <th colspan="6" class="address">Địa chỉ</th>
-                        </tr>
-                        <tr>
-                            <td class="name">
-                                Thu </td>
-                            <td class="sdt">
-                                0345295121 </td>
-                            <td colspan="6" class="address">
-                                273 An Duong Vuong, P.3, Q.5, TP.HCM  </td>
-                        </tr>
-                    </table>
-
-                    <table class="table-data">
-                        <tr class="tr-data">
-                            <th class="mavandon" colspan="8">
-                                Mã vận đơn: 20 </th>
-                        </tr>
-                        <tr>
-                            <td class="sanpham">
-                                GƯƠNG TRANG ĐIỂM </td>
-                            <td class="soluong">Số lượng: x1</td>
-                            <td class="doanhthu" rowspan="1">
-                                130€ </td>
-                            <td class="vanchuyen" rowspan="1">
-                                Thanh toán khi nhận hàng </td>
-                            <td class="date" rowspan="1">2024-05-27</td>
-                            <td class="trangthai" rowspan="1">
-                                Đơn chưa xác nhận </td>
-                            <form method="post">
-                                <td class="option" rowspan="1">
-                                    <select name="selection">
-                                        <option value="">--Chọn--</option>
-                                        <option value="1">Chưa xác nhận</option>
-                                        <option value="2">Xác nhận</option>
-                                        <option value="3">Giao thành công</option>
-                                        <option value="4">Hủy đơn</option>
-                                    </select>
-                                </td>
-                                <td class="capnhat" rowspan="1">
-                                    <input type="hidden" name="username" value="1">
-                                    <input type="hidden" name="id_mvd" value="20">
-                                    <input type="submit" name="update" value="Cập nhật">
-                                </td>
-                            </form>
-                        </tr>
-                        <tr>
-                            <th class="name">Tên</th>
-                            <th class="sdt">Số điện thoại</th>
-                            <th colspan="6" class="address">Địa chỉ</th>
-                        </tr>
-                        <tr>
-                            <td class="name">
-                                Hoang </td>
-                            <td class="sdt">
-                                0312654823 </td>
-                            <td colspan="6" class="address">
-                                273 An Duong Vuong, P.3, Q.5, TP.HCM </td>
-                        </tr>
-                    </table>
-
-
-                    <div style="text-align: center;">
-                        <p style="font-size: 20px;">Trang :
-                            <a class="phantrang" href="?admin=&page=1" style="text-decoration:none;"> 1 </a>
-                        </p>
-                    </div>
-
-
-                </div>
-
-
-            </section>
-
+        <!-- Top banner -->
+        <div class="top-banner">
+            <p>Online Store</p>
         </div>
-    </body>
 
-    </html>
+        <!-- Main content -->
+        <section class="main">
+            <div class="main-top"></div>
+
+            <div class="background-section">
+                <div class="main-body">
+                    <h1 style="text-transform: uppercase;">Chi tiết sản phẩm</h1>
+                </div>
+                <table>
+                    <tr>
+                        <th class="masanpham">Mã sản phẩm</th>
+                        <th class="phanloai">Phân loại</th>
+                        <th class="anh">Ảnh</th>
+                        <th class="tensp">Tên sản phẩm</th>
+                        <th class="gia">Giá</th>
+                        <th class="chucnang" colspan="2">Chức năng</th>
+                    </tr>
+                    <!-- Example products -->
+                    <tr>
+                        <td class="masanpham">1</td>
+                        <td class="phanloai">Giường</td>
+                        <td class="anh"><img src="image/bed1.jpg" alt="Giường" width="80px" height="80px"></td>
+                        <td class="tensp">Giường Ngủ Đẹp</td>
+                        <td class="gia">500€</td>
+                        <td class="chucnang"><a href="edit_product/suasanpham1.html" style="color: blue;">Sửa</a></td>
+                        <td class="xoa"><a href="#" style="color: blue;" onclick="deleteProduct()">Xóa</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function deleteProduct() {
+            if (confirm('Bạn có muốn xóa sản phẩm không?')) {
+                alert('Sản phẩm đã được xóa!');
+            }
+        }
+    </script>
+</body>
+</html>
