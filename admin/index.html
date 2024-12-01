@@ -1,4 +1,4 @@
-<span style="font-family: 'Times New Roman'">
+<span style="font-family: verdana, geneva, sans-serif;">
     <!DOCTYPE html>
     <html lang="en">
 
@@ -9,9 +9,8 @@
         <!-- Font Awesome Cdn Link -->
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+            integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
     <body>
@@ -21,9 +20,10 @@
                     <a href="index.html" style="color: black;">
                         <div class="logo">
                           <a href="user-info.html"><img src="image/meoadmin.jpg" alt=""> </a>
-                            <h1>Admin</h1>
+                            <h1></h1>
                         </div>
                     </a>
+                    <div class="account-type">Tài khoản: Admin</div>
                     <ul>
                         <li>
                             <!-- drop down sidebar -->
@@ -52,18 +52,18 @@
                                     <a href="add_products-admin.html" class="font-bold">Thêm sản phẩm</a>
                                 </div>
 
-                                <button class="dropdown-btn">
-                                    <i class="fa-solid fa-chart-simple fa-xl"></i>
-                                    <span class="nav-item">Thống kê</span>
-                                </button>
-                                <div class="dropdown-container">
-                                    <a href="user_statistic-admin.html" class="font-bold">Theo khách hàng</a>
-                                    <a href="cart_statistic-admin.html" class="font-bold">Theo đơn hàng</a>
-                                </div>
+                            <button class="dropdown-btn">
+                                <i class="fa-solid fa-chart-simple fa-xl"></i>
+                                <span class="nav-item">Thống kê</span>
+                            </button>
+                            <div class="dropdown-container">
+                                <a href="user_statistic-admin.html" class="font-bold">Theo khách hàng</a>
+                                <a href="cart_statistic-admin.html" class="font-bold">Theo đơn hàng</a>
+                            </div>
 
-                                <script>
-                                    var dropdown = document.getElementsByClassName("dropdown-btn");
-                                    var i;
+                            <script>
+                                var dropdown = document.getElementsByClassName("dropdown-btn");
+                                var i;
 
                                     for (i = 0; i < dropdown.length; i++) {
                                         dropdown[i].addEventListener("click", function () {
@@ -88,67 +88,54 @@
                                 function logOut() {
                                     if (confirm('Đăng xuất ?')) {
                                         alert("Đăng xuất thành công");
-                                        window.location.replace("../user/login.html");
+                                        window.location.replace("../web/login.html");
                                     }
                                 }
                             </script>
                         </li>
                     </ul>
                 </div>
-            </nav>
-
+            </nav>;
             <!-- top banner -->
             <div class="top-banner">
                 <p>online store</p>
             </div>
 
-            <section class="main">
-                <div class="main-top"></div>
-                <div class="background-section">
-                    <div class="main-body">
-                        <h1>QUẢN LÝ TÀI KHOẢN NGƯỜI DÙNG</h1>
-                    </div>
-                    <table style="width:90%">
-                        <tr>
-                            <th class="stt">STT</th>
-                            <th>Họ và tên</th>
-                            <th>Tên đăng nhập</th>
-                            <th>Mật khẩu</th>
-                            <th style="width: 18%;" colspan="2">Tình trạng tài khoản</th>
-                            <th class="thongtin">Thông tin</th>
-                        </tr>
-                        <tr>
-                            <td class="stt"> 1 </td>
-                            <td class="stt"> nguyen linh </td>
-                            <td class="stt"> 1 </td>
-                            <td class="stt"> </td>
+        <section class="main">
+            <div class="main-top"></div>
+            <div class="background-section">
+                <div class="main-body">
+                    <h1>QUẢN LÝ TÀI KHOẢN NGƯỜI DÙNG</h1>
+                </div>
+                <table style="width:90%">
+                    <tr>
+                        <th class="stt">STT</th>
+                        <th>Họ và tên</th>
+                        <th>Tên đăng nhập</th>
+                        <th>Mật khẩu</th>
+                        <th style="width: 18%;" colspan="2">Tình trạng tài khoản</th>
+                        <th class="thongtin">Thông tin</th>
+                    </tr>
+                    <tr>
+                        <td class="stt"> 1 </td>
+                        <td class="stt"> nguyen linh </td>
+                        <td class="stt"> 1 </td>
+                        <td class="stt"> </td>
 
                             <!--chuc nang-->
                             <form method="POST">
                                 <td class="status stt">
                                     <input type="hidden" name="username" value="1">
-                                    <input type="checkbox" id="lockCheckbox1" name="lock" value="1" checked>
+                                    <input type="checkbox" name="lock" value="1" checked>
                                 </td>
-                                
+
                                 <td class="khoa">
-                                    <button type="button" name="submit" onclick="toggleCheckbox1()">Thao tác</button>
+                                    <input type="submit" name="submit" value="Thao tác">
                                 </td>
-                                
-                                <script>
-                                    function toggleCheckbox1() {
-                                        // Lấy checkbox theo ID
-                                        const checkbox = document.getElementById('lockCheckbox1');
-                                
-                                        // Đảo ngược trạng thái của checkbox
-                                        checkbox.checked = !checkbox.checked;
-                                        alert("Cập nhật thành công");
-                                    }
-                                </script>
-                                
+
                                 <td class="sua">
-                                    <input type="button" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html';">
+                                    <input type="submit" name="submitFix" class="sua" value="Sửa">
                                 </td>
-                                
                             </form>
                         </tr>
                         <td class="stt"> 2 </td>
@@ -157,100 +144,63 @@
                         <td class="stt"> </td>
 
                         <!--chuc nang-->
-                        <!--chuc nang-->
                         <form method="POST">
                             <td class="status stt">
-                                <input type="hidden" name="username" value="1">
-                                <input type="checkbox" id="lockCheckbox2" name="lock" value="1" checked>
+                                <input type="hidden" name="username" value="123">
+                                <input type="checkbox" name="lock" value="1" checked>
                             </td>
-                            
+
                             <td class="khoa">
-                                <button type="button" name="submit" onclick="toggleCheckbox2()">Thao tác</button>
+                                <input type="submit" name="submit" value="Thao tác">
                             </td>
-                            
-                            <script>
-                                function toggleCheckbox2() {
-                                    // Lấy checkbox theo ID
-                                    const checkbox = document.getElementById('lockCheckbox2');
-                            
-                                    // Đảo ngược trạng thái của checkbox
-                                    checkbox.checked = !checkbox.checked;
-                                    alert("Cập nhật thành công");
-                                }
-                            </script>
-                            
+
                             <td class="sua">
-                                <input type="button" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html';">
+                                <input type="submit" name="submitFix" class="sua" value="Sửa">
                             </td>
-                            
                         </form>
                         </tr>
-                        
                         <td class="stt"> 3 </td>
                         <td class="stt"> a aa </td>
                         <td class="stt"> aaa </td>
                         <td class="stt"> 123 </td>
+
                         <!--chuc nang-->
                         <form method="POST">
                             <td class="status stt">
-                                <input type="hidden" name="username" value="1">
-                                <input type="checkbox" id="lockCheckbox3" name="lock" value="1" checked>
+                                <input type="hidden" name="username" value="aaa">
+                                <input type="checkbox" name="lock" value="1" checked>
                             </td>
-                            
+
                             <td class="khoa">
-                                <button type="button" name="submit" onclick="toggleCheckbox3()">Thao tác</button>
+                                <input type="submit" name="submit" value="Thao tác">
                             </td>
-                            
-                            <script>
-                                function toggleCheckbox3() {
-                                    // Lấy checkbox theo ID
-                                    const checkbox = document.getElementById('lockCheckbox3');
-                            
-                                    // Đảo ngược trạng thái của checkbox
-                                    checkbox.checked = !checkbox.checked;
-                                    alert("Cập nhật thành công");
-                                }
-                            </script>
-                            
+
                             <td class="sua">
-                                <input type="button" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html';">
+                                <input type="submit" name="submitFix" class="sua" value="Sửa">
                             </td>
                         </form>
                         </tr>
-
                         <td class="stt"> 4 </td>
                         <td class="stt"> dieu linh </td>
                         <td class="stt"> dieulinh </td>
                         <td class="stt"> 1 </td>
 
                         <!--chuc nang-->
-                            <form method="POST">
-                                <td class="status stt">
-                                    <input type="hidden" name="username" value="1">
-                                    <input type="checkbox" id="lockCheckbox4" name="lock" value="1" checked>
-                                </td>
-                                
-                                <td class="khoa">
-                                    <button type="button" name="submit" onclick="toggleCheckbox4()">Thao tác</button>
-                                </td>
-                                
-                                <script>
-                                    function toggleCheckbox4() {
-                                        // Lấy checkbox theo ID
-                                        const checkbox = document.getElementById('lockCheckbox4');
-                                
-                                        // Đảo ngược trạng thái của checkbox
-                                        checkbox.checked = !checkbox.checked;
-                                        alert("Cập nhật thành công");
-                                    }
-                                </script>
-                                
-                                <td class="sua">
-                                    <input type="button" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html';">
-                                </td>
-                            </form>
-                        </tr>
+                        <form method="POST">
+                            <td class="status stt">
+                                <input type="hidden" name="username" value="nhattruong">
+                                <input type="checkbox" name="lock" value="1" checked>
+                            </td>
 
+                            <td class="khoa">
+                                <input type="submit" name="submit" value="Thao tác">
+                            </td>
+
+                            <td class="sua">
+                                <input type="submit" name="submitFix" class="sua" value="Sửa">
+                            </td>
+                        </form>
+                        </tr>
                         <td class="stt"> 5 </td>
                         <td class="stt"> hoang hien </td>
                         <td class="stt"> hoanghien </td>
@@ -259,40 +209,28 @@
                         <!--chuc nang-->
                         <form method="POST">
                             <td class="status stt">
-                                <input type="hidden" name="username" value="1">
-                                <input type="checkbox" id="lockCheckbox5" name="lock" value="1" checked>
+                                <input type="hidden" name="username" value="test2">
+                                <input type="checkbox" name="lock" value="1" checked>
                             </td>
-                            
+
                             <td class="khoa">
-                                <button type="button" name="submit" onclick="toggleCheckbox5()">Thao tác</button>
+                                <input type="submit" name="submit" value="Thao tác">
                             </td>
-                            
-                            <script>
-                                function toggleCheckbox5() {
-                                    // Lấy checkbox theo ID
-                                    const checkbox = document.getElementById('lockCheckbox5');
-                            
-                                    // Đảo ngược trạng thái của checkbox
-                                    checkbox.checked = !checkbox.checked;
-                                    alert("Cập nhật thành công");
-                                }
-                            </script>
-                            
+
                             <td class="sua">
-                                <input type="button" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html';">
+                                <input type="submit" name="submitFix" class="sua" value="Sửa">
                             </td>
                         </form>
                         </tr>
-
                     </table>
                     <div style="padding-top: 30px">
                         <div class='pagination' style='font-size: 20px;'> Trang <a
                                 style='text-decoration: none; padding: 0; min-width: 2.5rem; text-align: center; height: 1.875rem; font-size: 1.25rem; margin-left: .9375rem; margin-right: .9375rem; color: rgba(0,0,0,.4); display: inline; justify-content: center;'
-                                href='#1'>1</a></div>
+                                href='&page=1'>1</a></div>
                     </div>
             </section>
 
-        </div>
-    </body>
+    </div>
+</body>
 
-    </html>
+</html>
