@@ -33,21 +33,28 @@
                 <a href="register.html" class="dangxuat">Đăng ký</a>
             </div>
             <div style="display: inline-flex;" class="dangnhap">
-                <a href="login.html">Đăng nhập</a>
+                <a href="personal_infomation.html">
+                    <img src="images/iconuser.png" class="editphucadmin" style="width: 22px">
+                    <section style="display: inline-block">
+                        user1 </section>
+                </a>
             </div>
 
-            <a class="active" href="index.html">Trang chủ</a>
-            <a href="products.html">Sản phẩm</a>
-            <a href="#" id="giohang">Giỏ hàng</a>
+            <a class="active" href="user.html">Trang chủ</a>
+            <a href="sanpham_trangchu.html">Sản phẩm</a>
+            <a href="cart.html">Giỏ hàng</a>
+
+            <!-- <a href="#" id="giohang">Giỏ hàng</a>
             <script>
                 document.getElementById("giohang").onclick = function () {
                     alert("Hãy đăng nhập trước để vào giỏ hàng");
                     location.assign("login.html");
                 }
-            </script>
-            <a href="advanced_product_search.html" class="account">Tìm kiếm</a>
+            </script> -->
+            <a href="timkiem_trangchu.html" class="account">Tìm kiếm</a>
             <div class="search-container">
                 <input type="text" id="searchtext" placeholder="Tìm kiếm.." oninput="searchProducts()">
+                
                 <button type="button" onclick="searchProducts()">
                     <i class="fa fa-search"></i>
                 </button>

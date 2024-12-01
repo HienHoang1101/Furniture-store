@@ -6,7 +6,6 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width,initial-scal=1.0">
     <meta http-equip="X-UA-compatible" content="ie=edge">
-
     <link rel="icon" type="image/png" href="images/onlineshop.png">
     <link rel="stylesheet" href="style/style.css" media="screen" type="text/css" />
     <link rel="stylesheet" href="style/style_topnav.css" media="screen" type="text/css" />
@@ -26,30 +25,30 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="script/jquery.store.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
 </head>
 
 <body>
     <section id="home">
+
+
+
         <div class="topnav">
-            <div style="display: flex;" class="dangxuat">
-                <a href="register.html" class="dangxuat">Đăng ký</a>
-            </div>
-            <div style="display: inline-flex;" class="dangnhap">
-                <a href="login.html">Đăng nhập</a>
+            <div style="display: inline-flex;" class="dangxuat">
+                <a href="index.html" class="dangxuat">Đăng xuất</a>
             </div>
 
-            <a class="active" href="index.html">Trang chủ</a>
-            <a href="products.html">Sản phẩm</a>
-            <a href="#" id="giohang">Giỏ hàng</a>
-            <script>
-                button = document.getElementById("giohang");
-                button.onclick = function () {
-                    alert("Hãy đăng nhập trước để vào giỏ hàng");
-                    location.assign("login.html");
-                }
-            </script>
-            <a href="advanced_product_search.html" class="account">Tìm kiếm</a>
+            <div style="display: inline-flex;" class="dangnhap">
+                <a href="personal_infomation.html">
+                    <img src="images/iconuser.png" class="editphucadmin" style="width: 22px">
+                    <section style="display: inline-block">
+                        user1 </section>
+                </a>
+            </div>
+
+            <a class="active" href="user.html" style="background-color: black;">Trang chủ</a>
+            <a href="sanpham_trangchu.html">Sản phẩm</a>
+            <a href="cart.html">Giỏ hàng</a>
+            <a href="timkiem_trangchu.html" class="account">Tìm kiếm</a>
             <div class="search-container">
                 <form action="sanpham_timkiem_trangchu.html" method="GET">
                     <input type="hidden" name="username" value="user1">
@@ -58,9 +57,9 @@
                         <i class="fa fa-search"></i>
                     </button>
                 </form>
+                
             </div>
-        </div>
-        <!-- banner images -->
+        </div> <!-- banner images -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -87,6 +86,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+
     </section>
     <!-- top nav -->
 
@@ -99,25 +99,25 @@
             <div class="row">
                 <div class="col-md-3">
                     <h1>Giường</h1>
-                    <a href="categories1.html">
+                    <a href="danhmuc1.html">
                         <img src="images/bed5.jpg">
                     </a>
                 </div>
                 <div class="col-md-3">
                     <h1>Ghế</h1>
-                    <a href="categories2.html">
+                    <a href="danhmuc2.html">
                         <img src="images/sofa5.jpg">
                     </a>
                 </div>
                 <div class="col-md-3">
                     <h1>Bàn</h1>
-                    <a href="categories3.html">
+                    <a href="danhmuc3.html">
                         <img src="images/table5.jpg">
                     </a>
                 </div>
                 <div class="col-md-3">
                     <h1>Gương</h1>
-                    <a href="categories4.html">
+                    <a href="danhmuc4.html">
                         <img src="images/mirror5.jpg">
                     </a>
                 </div>
@@ -139,17 +139,15 @@
                         <div class="product-top">
                             <img src="images/table5.jpg" alt="">
                             <div class="overlay-right">
-                                <a href="../user/productdetail20.html" class="btn btn-secondary" title="Xem chi tiết">
+                                <a href="chitiet_sanpham20.html" class="btn btn-secondary" title="Xem chi tiết">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                <form id="add-to-cart-form" action="cart.html" method="post">
                                     <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
                                         name="themvaogiohang">
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
-                                </form>
                             </div>
-
                         </div>
 
                         <div class="product-bottom text-center">
@@ -163,14 +161,10 @@
                                 <p class="product-price">90€</p>
                                 <input type="hidden" name="id_product" value="20">
                                 <label for="qty-20">Số lượng</label>
-                                <input class="product-value" type="number" min="1" max="1000" name="quantity"
-                                    value="1" />
-                                    <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
-                                        <p>
-                                            <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
-                                        </p>
-                                    </form>
-
+                                <input class="product-value" type="number" min="1" max="10000" name="quantity"
+                                    value="1">
+                                <p><input name="themvaogiohang" type="submit" value="Mua" class="btn" /></p>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -178,15 +172,14 @@
                         <div class="product-top">
                             <img src="images/sofa5.jpg" alt="">
                             <div class="overlay-right">
-                                <a href="../user/productdetail19.html" class="btn btn-secondary" title="Xem chi tiết">
+                                <a href="chitiet_sanpham19.html" class="btn btn-secondary" title="Xem chi tiết">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                <form id="add-to-cart-form" action="cart.html" method="post">
                                     <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
                                         name="themvaogiohang">
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
-                                </form>
                             </div>
                         </div>
 
@@ -202,13 +195,10 @@
                                 <p class="product-price">200€</p>
                                 <input type="hidden" name="id_product" value="19">
                                 <label for="qty-19">Số lượng</label>
-                                <input class="product-value" type="number" min="1" max="1000" name="quantity"
-                                    value="1" />
-                                    <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
-                                        <p>
-                                            <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
-                                        </p>
-                                    </form>
+                                <input class="product-value" type="number" min="1" max="10000" name="quantity"
+                                    value="1">
+                                <p><input name="themvaogiohang" type="submit" value="Mua" class="btn" /></p>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -216,15 +206,14 @@
                         <div class="product-top">
                             <img src="images/bed5.jpg" alt="">
                             <div class="overlay-right">
-                                <a href="../user/productdetail18.html" class="btn btn-secondary" title="Xem chi tiết">
+                                <a href="chitiet_sanpham18.html" class="btn btn-secondary" title="Xem chi tiết">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                <form id="add-to-cart-form" action="cart.html" method="post">
                                     <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
                                         name="themvaogiohang">
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
-                                </form>
                             </div>
                         </div>
 
@@ -240,12 +229,9 @@
                                 <p class="product-price">1000€</p>
                                 <input type="hidden" name="id_product" value="18">
                                 <label for="qty-18">Số lượng</label>
-                                <input class="product-value" type="number" min="1" max="1000" name="quantity"
-                                    value="1" />
-                                <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
-                                    <p>
-                                        <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
-                                    </p>
+                                <input class="product-value" type="number" min="1" max="10000" name="quantity"
+                                    value="1">
+                                <p><input name="themvaogiohang" type="submit" value="Mua" class="btn" /></p>
                                 </form>
                             </div>
                         </div>
@@ -254,15 +240,14 @@
                         <div class="product-top">
                             <img src="images/mirror2.jpg" alt="">
                             <div class="overlay-right">
-                                <a href="../user/productdetail17.html" class="btn btn-secondary" title="Xem chi tiết">
+                                <a href="chitiet_sanpham17.html" class="btn btn-secondary" title="Xem chi tiết">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                <form id="add-to-cart-form" action="cart.html" method="post">
                                     <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
                                         name="themvaogiohang">
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
-                                </form>
                             </div>
                         </div>
 
@@ -277,13 +262,10 @@
                                 <p class="product-price">100€</p>
                                 <input type="hidden" name="id_product" value="17">
                                 <label for="qty-17">Số lượng</label>
-                                <input class="product-value" type="number" min="1" max="1000" name="quantity"
-                                    value="1" />
-                                    <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
-                                        <p>
-                                            <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
-                                        </p>
-                                    </form>
+                                <input class="product-value" type="number" min="1" max="10000" name="quantity"
+                                    value="1">
+                                <p><input name="themvaogiohang" type="submit" value="Mua" class="btn" /></p>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -291,15 +273,14 @@
                         <div class="product-top">
                             <img src="images/mirror1.jpg" alt="">
                             <div class="overlay-right">
-                                <a href="../user/productdetail16.html" class="btn btn-secondary" title="Xem chi tiết">
+                                <a href="chitiet_sanpham16.html" class="btn btn-secondary" title="Xem chi tiết">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                <form id="add-to-cart-form" action="cart.html" method="post">
                                     <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
                                         name="themvaogiohang">
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
-                                </form>
                             </div>
                         </div>
 
@@ -315,13 +296,10 @@
                                 <p class="product-price">130€</p>
                                 <input type="hidden" name="id_product" value="16">
                                 <label for="qty-16">Số lượng</label>
-                                <input class="product-value" type="number" min="1" max="1000" name="quantity"
-                                    value="1" />
-                                    <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
-                                        <p>
-                                            <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
-                                        </p>
-                                    </form>
+                                <input class="product-value" type="number" min="1" max="10000" name="quantity"
+                                    value="1">
+                                <p><input name="themvaogiohang" type="submit" value="Mua" class="btn" /></p>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -329,15 +307,14 @@
                         <div class="product-top">
                             <img src="images/table2.jpg" alt="">
                             <div class="overlay-right">
-                                <a href="../user/productdetail15.html" class="btn btn-secondary" title="Xem chi tiết">
+                                <a href="chitiet_sanpham15.html" class="btn btn-secondary" title="Xem chi tiết">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                <form id="add-to-cart-form" action="cart.html" method="post">
                                     <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
                                         name="themvaogiohang">
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
-                                </form>
                             </div>
                         </div>
 
@@ -353,13 +330,10 @@
                                 <p class="product-price">230€</p>
                                 <input type="hidden" name="id_product" value="15">
                                 <label for="qty-15">Số lượng</label>
-                                <input class="product-value" type="number" min="1" max="1000" name="quantity"
-                                    value="1" />
-                                    <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
-                                        <p>
-                                            <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
-                                        </p>
-                                    </form>
+                                <input class="product-value" type="number" min="1" max="10000" name="quantity"
+                                    value="1">
+                                <p><input name="themvaogiohang" type="submit" value="Mua" class="btn" /></p>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -367,15 +341,14 @@
                         <div class="product-top">
                             <img src="images/table1.jpg" alt="">
                             <div class="overlay-right">
-                                <a href="../user/productdetail14.html" class="btn btn-secondary" title="Xem chi tiết">
+                                <a href="chitiet_sanpham14.html" class="btn btn-secondary" title="Xem chi tiết">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <form id="add-to-cart-form" method="post" onsubmit="return checkLogin(event)">
+                                <form id="add-to-cart-form" action="cart.html" method="post">
                                     <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
                                         name="themvaogiohang">
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
-                                </form>
                             </div>
                         </div>
 
@@ -390,13 +363,10 @@
                                 <p class="product-price">200€</p>
                                 <input type="hidden" name="id_product" value="14">
                                 <label for="qty-14">Số lượng</label>
-                                <input class="product-value" type="number" min="1" max="1000" name="quantity"
-                                    value="1" />
-                                    <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
-                                        <p>
-                                            <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
-                                        </p>
-                                    </form>
+                                <input class="product-value" type="number" min="1" max="10000" name="quantity"
+                                    value="1">
+                                <p><input name="themvaogiohang" type="submit" value="Mua" class="btn" /></p>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -404,10 +374,10 @@
                         <div class="product-top">
                             <img src="images/sofa2.jpg" alt="">
                             <div class="overlay-right">
-                                <a href="../user/productdetail13.html" class="btn btn-secondary" title="Xem chi tiết">
+                                <a href="chitiet_sanpham13.html" class="btn btn-secondary" title="Xem chi tiết">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <form id="add-to-cart-form" method="post">
+                                <form id="add-to-cart-form" action="cart.html" method="post">
                                     <button type="submit" class="btn btn-secondary" title="Thêm vào giỏ hàng"
                                         name="themvaogiohang">
                                         <i class="fa fa-shopping-cart"></i>
@@ -426,38 +396,13 @@
                                 <p class="product-price">300€</p>
                                 <input type="hidden" name="id_product" value="13">
                                 <label for="qty-13">Số lượng</label>
-                                <input class="product-value" type="number" min="1" max="1000" name="quantity"
-                                    value="1" />
-                                    <form id="buy-form" method="post" onsubmit="return checkLogin(event)">
-                                        <p>
-                                            <input name="themvaogiohang" type="submit" value="Mua" class="btn" />
-                                        </p>
-                                    </form>
+                                <input class="product-value" type="number" min="1" max="10000" name="quantity"
+                                    value="1">
+                                <p><input name="themvaogiohang" type="submit" value="Mua" class="btn" /></p>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <script>
-                        // CHECK ĐĂNG NHẬP
-                        function checkLogin(event) {
-                            // Prevent the default form submission
-                            event.preventDefault();
-
-                            // Check if the user is logged in
-                            // This is a placeholder. Replace with actual login check logic.
-                            const isLoggedIn = false; // Change this to your actual login check
-
-                            if (isLoggedIn) {
-                                // If the user is logged in, submit the form
-                                document.getElementById('add-to-cart-form').submit();
-                                document.getElementById('buy-form').submit();
-                            }
-                
-                             else {
-                                // If the user is not logged in, redirect to the login page
-                                window.location.href = '../user/login.html'; // Change to your actual login URL
-                            }
-                        }
-                    </script>
                 </div>
             </div>
         </div>
@@ -466,11 +411,10 @@
     <br>
     <div style="text-align: center;">
         <p style="font-size: 20px;">Trang :
-            <a class="phantrang" href="products.html?page=1" style="text-decoration:none;"> 1 </a><a class="phantrang"
-                href="products2.html?page=2" style="text-decoration:none;"> 2 </a>
+            <a class="phantrang" href="sanpham_trangchu.html"> 1 </a><a class="phantrang" href="sanpham_trangchu2.html">
+                2 </a>
         </p>
     </div>
-
 
 
     <hr class="featurette-divider">
@@ -565,7 +509,7 @@
                 <h1>Thông tin liên lạc</h1>
                 <div class="row">
                     <div class="col-md-6">
-                        <form class="contact-form">
+                        <form class="contact-form" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Họ tên đầy đủ của bạn">
                             </div>
@@ -578,13 +522,7 @@
                             <div class="form-group">
                                 <textarea class="form-control" rows="4" placeholder="Message"></textarea>
                             </div>
-                            <button type="submit" id="btn" class="btn btn-primary">Gửi</button>
-                            <script language="javascript">
-                                var button = document.getElementById("btn");
-                                button.onclick = function () {
-                                    alert("Thông tin liên lạc của bạn đã được gửi đến nhà bán hàng.");
-                                }
-                            </script>
+                            <button type="submit" id="btn" class="btn btn-primary" name="submit_contact">Gửi</button>
                         </form>
                     </div>
                     <div class="col-md-6 contact-info">
@@ -599,7 +537,6 @@
                             <a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>
                             <a href="https://twitter.com/login"><i class="fa fa-twitter"></i></a>
                             <a href="https://myaccount.google.com/"><i class="fa fa-google-plus"></i></a>
-
                         </div>
                     </div>
 
@@ -608,7 +545,6 @@
             </div>
 
         </section>
-
 </body>
 
 </html>

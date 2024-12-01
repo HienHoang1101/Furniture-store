@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thông tin cá nhân</title>
+    <link rel="icon" type="image/jpg" href="images/iconuser.png">
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width,initial-scal=1.0">
+    <meta http-equip="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_topnav.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_ourteam.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="style/style_banner.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_serviece.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_product.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_pagination.css">
+    <link rel="stylesheet" href="style/style_products.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="style/bootstrap.min.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="style/p_inf.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="script/jquery.store.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <br>
+    <section id="home">
+    <br><br>
+
+
+        <div class="topnav">
+            <div style="display: inline-flex;" class="dangxuat">
+                <a href="index.html" class="dangxuat">Đăng xuất</a>
+            </div>
+
+            <div style="display: inline-flex;" class="dangnhap">
+                <a href="personal_infomation.html">
+                    <img src="images/iconuser.png" class="editphucadmin" style="width: 22px">
+                    <section style="display: inline-block">
+                        user1 </section>
+                </a>
+            </div>
+
+            <a class="active" href="user.html" style="background-color: black;">Trang chủ</a>
+            <a href="sanpham_trangchu.html">Sản phẩm</a>
+            <a href="cart.html">Giỏ hàng</a>
+            <a href="timkiem_trangchu.html" class="account">Tìm kiếm</a>
+            <div class="search-container">
+                <form action="sanpham_timkiem_trangchu.html" method="GET">
+                    <input type="hidden" name="username" value="user1">
+                    <input type="text" placeholder="Tìm kiếm.." name="searchtext">
+                    <button type="submit" name="search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- top nav -->
+
+    <div>
+        <div>
+            <div style="display: flex;">
+                <form method="POST" action="" style="display: contents">
+                    <div class="div_center">
+                        <div class="nav">
+                            <div class="nav_address">
+                                <h4>Thêm địa chỉ</h4>
+                            </div>
+                        </div>
+                        <div style="margin-left: 2%; margin-right: 5%;">
+                            <hr style="border: 1px solid rgba(0,0,0,.9);">
+                            <br>
+                            <div>
+                                <label style="width: 30%;"><span class="red_dot">*</span>Tên:</label>
+                                <input style="width: 50%;" type="text" maxlength="150" name="name" required placeholder="Tên">
+                            </div>
+                            <br>
+    
+                            <div>
+                                <label style="width: 30%;"><span class="red_dot">*</span>Điện thoại:</label>
+                                <input style="width: 50%;" name="phone" required placeholder="Số điện thoại">
+                            </div>
+                            <br>
+    
+                            <div>
+                                <label style="width: 30%;"><span class="red_dot">*</span>Quốc gia:</label>
+                                <input type="text" name="country" style="width: 50%;" placeholder="Quốc gia" required>
+                            </div>
+                            <br>
+    
+                            <div>
+                                <label style="width: 30%;"><span class="red_dot">*</span>Tỉnh/Thành phố:</label>
+                                <input type="text" name="city" style="width: 50%;" placeholder="Tỉnh/Thành phố" required>
+                            </div>
+                            <br>
+    
+                            <div>
+                                <label style="width: 30%;"><span class="red_dot">*</span>Quận/Huyện:</label>
+                                <input type="text" name="district" style="width: 50%;" placeholder="Quận/Huyện" required>
+                            </div>
+                            <br>
+    
+                            <div>
+                                <label style="width: 30%;"><span class="red_dot">*</span>Địa chỉ chi tiết:</label>
+                                <input style="width: 50%;" name="addressdetail" placeholder="Địa chỉ chi tiết" required>
+                            </div>
+                            <br>
+    
+                            <div>
+                                <label style="width: 30%;"><span class="red_dot">*</span>Phương thức thanh toán:</label>
+                                <select name="payment" style="width: 50%" id="payment-method" onchange="togglePaymentForm()" required>
+                                    <option value="cash">Tiền mặt</option>
+                                    <option value="bank">Chuyển khoản</option>
+                                    <option value="card">Thẻ tín dụng/Thẻ ghi nợ</option>
+                                </select>
+                            </div>
+                            <br>
+    
+                            <div id="card-payment-form" style="display:none; margin-top: 20px;">
+                                <label style="width: 30%;"><span class="red_dot">*</span> Số thẻ:</label>
+                                <input style="width: 50%;" type="text" maxlength="16" name="card_number" placeholder="Nhập số thẻ">
+                                <br><br>
+                                <label style="width: 30%;"><span class="red_dot">*</span> Tên trên thẻ:</label>
+                                <input style="width: 50%;" type="text" name="card_name" placeholder="Tên chủ thẻ">
+                                <br><br>
+                                <label style="width: 30%;"><span class="red_dot">*</span> Ngày hết hạn:</label>
+                                <input style="width: 20%;" type="text" name="expiry_date" placeholder="MM/YY">
+                                <br><br>
+                                <label style="width: 30%;"><span class="red_dot">*</span> CVV:</label>
+                                <input style="width: 20%;" type="text" maxlength="3" name="cvv" placeholder="CVV">
+                            </div>
+    
+                            <div style="display: inline-flex; margin-left: 20%; padding-bottom: 20px">
+                                <input class="center edit_p_inf" type="button" onclick="window.location.replace('select_address.html')" value="Quay lại">
+                                <input class="center edit_p_inf" type="submit" onclick="window.location.replace('select_address_done.html')" name="submit" value="Thêm">
+                            </div>
+                            <br>
+                            <div id="success-message" style="display:none; color: green; font-weight: bold; text-align: center; margin-top: 20px;">
+                                Thêm thành công!
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <script>
+            function togglePaymentForm() {
+                var paymentMethod = document.getElementById("payment-method").value;
+                var cardForm = document.getElementById("card-payment-form");
+                if (paymentMethod === "card") {
+                    cardForm.style.display = "block";
+                } else {
+                    cardForm.style.display = "none";
+                }
+            }
+            document.getElementById('addressForm').addEventListener('submit', function (e) {
+                e.preventDefault(); // Ngăn việc reload trang
+                var successMessage = document.getElementById('success-message');
+                successMessage.style.display = 'block'; // Hiển thị thông báo
+                setTimeout(function () {
+                    window.location.href = 'select_address_done.html'; // Chuyển trang sau 2 giây
+                }, 2000);
+            });
+        </script>
+</div>
+</body>
+</html>

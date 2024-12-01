@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Giỏ hàng</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="images/cart.png">
+    <link rel="stylesheet" href="style/style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_topnav.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_ourteam.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="style/style_banner.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_serviece.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_pagination.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="style/p_inf.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="style/bootstrap.min.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section id="home">
+        <br />
+        <b>Notice</b>: session_start(): Ignoring session_start() because a session is already active in
+        <b>C:\xampp\htdocs\web22\web\header_user.html</b> on line <b>2</b><br />
+
+
+
+        <div class="topnav">
+            <div style="display: inline-flex;" class="dangxuat">
+                <a href="index.html" class="dangxuat">Đăng xuất</a>
+            </div>
+
+            <div style="display: inline-flex;" class="dangnhap">
+                <a href="personal_infomation.html">
+                    <img src="images/iconuser.png" class="editphucadmin" style="width: 22px">
+                    <section style="display: inline-block">
+                        user1 </section>
+                </a>
+            </div>
+
+            <a class="active" href="user.html" style="background-color: black;">Trang chủ</a>
+            <a href="sanpham_trangchu.html">Sản phẩm</a>
+            <a href="cart.html">Giỏ hàng</a>
+            <a href="timkiem_trangchu.html" class="account">Tìm kiếm</a>
+            <div class="search-container">
+                <form action="sanpham_timkiem_trangchu.html" method="GET">
+                    <input type="hidden" name="username" value="user1">
+                    <input type="text" placeholder="Tìm kiếm.." name="searchtext">
+                    <button type="submit" name="search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div>
+        <div style="display: flex;">
+            <div class="div_left">
+                <h2 style="text-align: center; background-color: #343a40; color: #ffff ;">Tài khoản</h2><br>
+                <!--    <h4 style="text-align: center; background-color: #343a40; color: #ffff ;">Tài khoản</h4><br>-->
+                <div class="div_content_left" style="text-align: left;">
+                    <ul>
+                        <li><a title="Thông tin tài khoản" href="personal_infomation.html">Thông tin tài khoản</a></li>
+                        <br>
+
+                        <li><a title="Đổi mật khẩu" href="change_password.html">Đổi mật khẩu</a></li>
+                        <br>
+
+                        <li><a title="Địa chỉ" href="address.html">Địa chỉ</a></li>
+                        <br>
+
+                        <li><a title="Xem lại đơn hàng" href="lichsudonhang.html">Lịch sử đơn hàng</a></li>
+                        </li>
+                        <br>
+
+                        <li><a title="Đăng xuất" href="index.html">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+            <form action="" method="POST" style="display: contents">
+                <div class="div_right">
+                    <div style="margin-left: 5%; margin-right: 5%;">
+                        <h2 style="text-align: center;">Lịch sử đơn hàng</h2>
+                        <hr style="border: 1px solid black;">
+                        <table class="shopping-cart">
+                            <thead>
+                                <tr>
+                                    <th colspan="3" style="background-color: rgba(160,158,164,0.65)">
+                                        Mã vận đơn: 21 </th>
+                                </tr>
+                                <thead>
+                                    <tr class="item">
+                                        <th scope="col">Tên</th>
+                                        <th scope="col" style="text-align: center">Số điện thoại</th>
+                                        <th scope="col" style="text-align: center">Thanh toán</th>
+                                    </tr>
+                                </thead>
+
+                                <tr>
+                                    <td>Hoàng Thị Thu Hiền - 3122411051</td>
+                                    <td style="text-align: center">0377064041</td>
+                                    <td style="text-align: center">Thanh toán khi nhận hàng</td>
+                                </tr>
+                                <thead>
+                                    <tr class="item">
+                                        <th scope="col">địa chỉ</th>
+                                        <td colspan="2">
+                                            <p>273 An Dương Vương, phường 3, quận 5, tp.Hồ Chí Minh Vietnam </p>
+                                        </td>
+
+                                    </tr>
+                                </thead>
+                            </thead>
+                            <thead>
+                                <tr class="item">
+                                    <th scope="col">Sản phẩm</th>
+                                    <th scope="col" style="text-align: center">Số lượng</th>
+                                    <th scope="col" style="text-align: center">Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        SOFA LOẠI CỰC ÊM </td>
+                                    <td style="text-align: center">
+                                        1 </td>
+                                    <td style="text-align: center">
+                                        260€ </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        SOFA LUXURY </td>
+                                    <td style="text-align: center">
+                                        1 </td>
+                                    <td style="text-align: center">
+                                        250€ </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        GIƯỜNG GỖ BẠCH DƯƠNG </td>
+                                    <td style="text-align: center">
+                                        1 </td>
+                                    <td style="text-align: center">
+                                        300€ </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        BÀN SIÊU CỨNG </td>
+                                    <td style="text-align: center">
+                                        1 </td>
+                                    <td style="text-align: center">
+                                        75€ </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        GƯƠNG SIÊU BỰ </td>
+                                    <td style="text-align: center">
+                                        1 </td>
+                                    <td style="text-align: center">
+                                        90€ </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <p id="sub-total" style="text-align: left">
+                                            <strong>Tình trạng đơn:</strong>
+                                            Đơn chưa xác nhận
+                                        <p id="time">Thời gian nhận hàng (dự kiến):
+                                            2024-12-03 </p>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p id="sub-total">
+                                            <strong>Tổng cộng:</strong>
+                                            975€ <span id="stotal"></span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <table class="shopping-cart">
+                            <thead>
+                                <tr>
+                                    <th colspan="3" style="background-color: rgba(160,158,164,0.65)">
+                                        Mã vận đơn: 22 </th>
+                                </tr>
+                                <thead>
+                                    <tr class="item">
+                                        <th scope="col">Tên</th>
+                                        <th scope="col" style="text-align: center">Số điện thoại</th>
+                                        <th scope="col" style="text-align: center">Thanh toán</th>
+                                    </tr>
+                                </thead>
+
+                                <tr>
+                                    <td>Hoàng Thị Thu Hiền </td>
+                                    <td style="text-align: center">0377064040</td>
+                                    <td style="text-align: center">Thanh toán khi nhận hàng</td>
+                                </tr>
+                                <thead>
+                                    <tr class="item">
+                                        <th scope="col">địa chỉ</th>
+                                        <td colspan="2">
+                                            <p>273 An Dương Vương, phường 3, quận 5,tp.Hồ Chí Minh Vietnam </p>
+                                        </td>
+
+                                    </tr>
+                                </thead>
+                            </thead>
+                            <thead>
+                                <tr class="item">
+                                    <th scope="col">Sản phẩm</th>
+                                    <th scope="col" style="text-align: center">Số lượng</th>
+                                    <th scope="col" style="text-align: center">Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        BÀN GỖ SỒI </td>
+                                    <td style="text-align: center">
+                                        1 </td>
+                                    <td style="text-align: center">
+                                        90€ </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        BÀN KÍNH </td>
+                                    <td style="text-align: center">
+                                        2 </td>
+                                    <td style="text-align: center">
+                                        400€ </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        SOFA TRẮNG TINH TẾ </td>
+                                    <td style="text-align: center">
+                                        1 </td>
+                                    <td style="text-align: center">
+                                        300€ </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        GƯỜNG LUXURY </td>
+                                    <td style="text-align: center">
+                                        1 </td>
+                                    <td style="text-align: center">
+                                        1000€ </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        GƯƠNG MẶT TRỜI </td>
+                                    <td style="text-align: center">
+                                        1 </td>
+                                    <td style="text-align: center">
+                                        100€ </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <p id="sub-total" style="text-align: left">
+                                            <strong>Tình trạng đơn:</strong>
+                                            Đơn chưa xác nhận
+                                        <p id="time">Thời gian nhận hàng (dự kiến):
+                                            2024-12-04 </p>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p id="sub-total">
+                                            <strong>Tổng cộng:</strong>
+                                            1890€ <span id="stotal"></span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+
+                        <br>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

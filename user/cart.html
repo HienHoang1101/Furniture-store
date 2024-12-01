@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Giỏ hàng</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="images/cart.png">
+    <link rel="stylesheet" href="style/style_banner.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_web_cart.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_topnav.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_cart.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section id="home">
+
+
+
+        <div class="topnav">
+            <div style="display: inline-flex;" class="dangxuat">
+                <a href="index.html" class="dangxuat">Đăng xuất</a>
+            </div>
+
+            <div style="display: inline-flex;" class="dangnhap">
+                <a href="personal_infomation.html">
+                    <img src="images/iconuser.png" class="editphucadmin" style="width: 22px">
+                    <section style="display: inline-block">
+                        user1 </section>
+                </a>
+            </div>
+
+            <a class="active" href="user.html" style="background-color: black;">Trang chủ</a>
+            <a href="sanpham_trangchu.html">Sản phẩm</a>
+            <a href="cart.html">Giỏ hàng</a>
+            <a href="timkiem_trangchu.html" class="account">Tìm kiếm</a>
+            <div class="search-container">
+                <form action="sanpham_timkiem_trangchu.html" method="GET">
+                    <input type="hidden" name="username" value="user1">
+                    <input type="text" placeholder="Tìm kiếm.." name="searchtext">
+                    <button type="submit" name="search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div id="site">
+        <div id="content">
+            <header id="masthead"></header>
+            <h1>Giỏ hàng của bạn</h1>
+            <form id="shopping-cart" action="cart.html?action=submit" method="post">
+                <table class="shopping-cart">
+                    <tr class="item">
+                        <th class="product-number">Stt</th>
+                        <th class="product-name">Sản phẩm</th>
+                        <th class="product-img">Ảnh sản phẩm</th>
+                        <th class="product-price"> Đơn giá</th>
+                        <th class="product-quantity">Số lượng</th>
+                        <th class="product-money">Thành tiền</th>
+                        <th class="product-delete">Thao tác</th>
+                    </tr>
+                    <tr>
+                        <td class="product-number">1</td>
+                        <td class="product-name">SOFA LOẠI CỰC ÊM</td>
+                        <td class="product-img">
+                            <img id="product-img" src="images/sofa4.jpg">
+                        </td>
+                        <td class="product-price">260</td>
+                        <td class="product-quantity">1</td>
+                        <td class="product-money">260€</td>
+                        <td class="product-delete">
+                            <a href="cart.html" onclick="showDeleteSuccess(); return false;">Xóa</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="product-number">2</td>
+                        <td class="product-name">SOFA LUXURY</td>
+                        <td class="product-img">
+                            <img id="product-img" src="images/sofa1.jpg">
+                        </td>
+                        <td class="product-price">250</td>
+                        <td class="product-quantity">1</td>
+                        <td class="product-money">250€</td>
+                        <td class="product-delete">
+                            <a href="cart.html" onclick="showDeleteSuccess(); return false;">Xóa</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="product-number">3</td>
+                        <td class="product-name">GIƯỜNG GỖ BẠCH DƯƠNG</td>
+                        <td class="product-img">
+                            <img id="product-img" src="images/bed1.jpg">
+                        </td>
+                        <td class="product-price">300</td>
+                        <td class="product-quantity">1</td>
+                        <td class="product-money">300€</td>
+                        <td class="product-delete">
+                            <a href="cart.html" onclick="showDeleteSuccess(); return false;">Xóa</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="product-number">4</td>
+                        <td class="product-name">BÀN SIÊU CỨNG</td>
+                        <td class="product-img">
+                            <img id="product-img" src="images/table4.jpg">
+                        </td>
+                        <td class="product-price">75</td>
+                        <td class="product-quantity">1</td>
+                        <td class="product-money">75€</td>
+                        <td class="product-delete">
+                            <a href="cart.html" onclick="showDeleteSuccess(); return false;">Xóa</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="product-number">5</td>
+                        <td class="product-name">GƯƠNG SIÊU BỰ</td>
+                        <td class="product-img">
+                            <img id="product-img" src="images/mirror4.jpg">
+                        </td>
+                        <td class="product-price">90</td>
+                        <td class="product-quantity">1</td>
+                        <td class="product-money">90€</td>
+                        <td class="product-delete">
+                            <a href="cart.html" onclick="showDeleteSuccess(); return false;">Xóa</a>
+                        </td>
+                    </tr>
+                    <tr id="row-total">
+                        <th class="product-number">Tổng tiền</th>
+                        <th class="product-name">&nbsp;</th>
+                        <th class="product-img">&nbsp;</th>
+                        <th class="product-price">&nbsp;</th>
+                        <th class="product-quantity">&nbsp;</th>
+                        <th class="product-money">975€</th>
+                        <th class="product-delete"></th>
+                    </tr>
+
+                </table>
+                <ul id="shopping-cart-actions">
+                    <li>
+                        <a href="select_address.html" id="thanhtoan" class="btn">Thanh toán</a>
+                    </li>
+                    <li>
+                        <a href="sanpham_trangchu.html" class="btn">Tiếp tục mua sắm</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <script>
+        function showDeleteSuccess() {
+            alert("Xóa sản phẩm thành công!");
+        }
+        </script>
+        
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thông tin cá nhân</title>
+    <link rel="icon" type="image/jpg" href="images/iconuser.png">
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width,initial-scal=1.0">
+    <meta http-equip="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_topnav.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_ourteam.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="style/style_banner.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_serviece.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="style/style_pagination.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="style/p_inf.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <section id="home">
+        <br />
+        <b>Notice</b>: session_start(): Ignoring session_start() because a session is already active in
+        <b>C:\xampp\htdocs\web22\web\header_user.html</b> on line <b>2</b><br />
+
+
+
+        <div class="topnav">
+            <div style="display: inline-flex;" class="dangxuat">
+                <a href="index.html" class="dangxuat">Đăng xuất</a>
+            </div>
+
+            <div style="display: inline-flex;" class="dangnhap">
+                <a href="personal_infomation.html">
+                    <img src="images/iconuser.png" class="editphucadmin" style="width: 22px">
+                    <section style="display: inline-block">
+                        user1 </section>
+                </a>
+            </div>
+
+            <a class="active" href="user.html" style="background-color: black;">Trang chủ</a>
+            <a href="sanpham_trangchu.html">Sản phẩm</a>
+            <a href="cart.html">Giỏ hàng</a>
+            <a href="timkiem_trangchu.html" class="account">Tìm kiếm</a>
+            <div class="search-container">
+                <form action="sanpham_timkiem_trangchu.html" method="GET">
+                    <input type="hidden" name="username" value="user1">
+                    <input type="text" placeholder="Tìm kiếm.." name="searchtext">
+                    <button type="submit" name="search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- top nav -->
+    <div>
+        <div style="display: flex;">
+            <div class="div_left">
+                <h2 style="text-align: center; background-color: #343a40; color: #ffff ;">Tài khoản</h2><br>
+                <!--    <h4 style="text-align: center; background-color: #343a40; color: #ffff ;">Tài khoản</h4><br>-->
+                <div class="div_content_left" style="text-align: left;">
+                    <ul>
+                        <li><a title="Thông tin tài khoản" href="personal_infomation.html">Thông tin tài khoản</a></li>
+                        <br>
+
+                        <li><a title="Đổi mật khẩu" href="change_password.html">Đổi mật khẩu</a></li>
+                        <br>
+
+                        <li><a title="Địa chỉ" href="address.html">Địa chỉ</a></li>
+                        <br>
+
+                        <li><a title="Xem lại đơn hàng" href="lichsudonhang.html">Lịch sử đơn hàng</a></li>
+                        </li>
+                        <br>
+
+                        <li><a title="Đăng xuất" href="index.html">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+            <form action="" method="POST" style="display: contents" onsubmit="handleSubmit(event)">
+                <div class="div_right">
+                    <div style="margin-left: 5%; margin-right: 5%;">
+                        <h2 style="text-align: center;">Cập nhật thông tin tài khoản</h2>
+                        <hr style="border: 1px solid black;">
+                        <div>
+                            <label style="width: 30%; display: none"><span class="red_dot">*</span>
+                                Tên đăng nhập
+                            </label>
+                            <input style="width: 50%;" type="hidden" name="username" readonly value="user1">
+                        </div>
+                        <br>
+
+                        <div>
+                            <label style="width: 30%;"><span class="red_dot">*</span>
+                                Họ
+                            </label>
+                            <input style="width: 50%;" type="text" name="ho" required placeholder="Họ" value="Hoàng">
+                        </div>
+                        <br>
+
+                        <div>
+                            <label style="width: 30%;"><span class="red_dot">*</span>
+                                Tên:</label>
+                            <input style="width: 50%;" type="text" maxlength="150" name="ten" required placeholder="Tên"
+                                value="Hiền">
+                        </div>
+                        <br>
+
+
+                        <div>
+                            <label style="width: 30%;"><span class="red_dot">*</span>
+                                Giới tính:</label>
+                            <select name="sex" style="width: 50%" required>
+                                <option value="0">
+                                <option value="1">Nam</option>
+                                <option value="2">Nữ</option>
+                            </select>
+
+                        </div>
+                        <br>
+
+                        <div>
+                            <label style="width: 30%;"><span class="red_dot">*</span>
+                                Ngày sinh:</label>
+                            <input type="date" style="width: 50%;" name="date" required placeholder="Ngày sinh"
+                                value="0000-00-00">
+                        </div>
+                        <br>
+
+                        <div>
+                            <label style="width: 30%;"><span class="red_dot">*</span>
+                                Số điện thại:</label>
+                            <input style="width: 50%;" type="text" maxlength="150" name="phone" required
+                                placeholder="Số điện thoại" value="03333333">
+                        </div>
+                        <br>
+
+                        <div>
+                            <label style="width: 30%;"><span class="red_dot">*</span>
+                                Email:</label>
+                            <input type="email" style="width: 50%;" name="email" required placeholder="Địa chỉ mail"
+                                value="fjjghf@gmail.com">
+                        </div>
+                        <br>
+                        <div>
+                            <input class="center edit_p_inf" type="submit" name="submit" value="cập nhật"">
+                        </div>
+                        
+                        <script>
+                            function handleSubmit(event) {
+                                // Ngăn chặn hành động mặc định của form
+                                event.preventDefault();
+                        
+                                // Thực hiện các thao tác gửi dữ liệu đến server ở đây
+                                // Ví dụ: sử dụng Fetch API hoặc XMLHttpRequest để gửi dữ liệu
+                        
+                                // Hiển thị thông báo cập nhật thành công
+                                alert("Cập nhật thành công!");
+                                
+                                // Nếu bạn muốn chuyển hướng hoặc làm gì đó khác sau khi cập nhật
+                                // window.location.href = "personal_infomation.html"; // Ví dụ: chuyển hướng đến trang khác
+                            }
+                            </script>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
