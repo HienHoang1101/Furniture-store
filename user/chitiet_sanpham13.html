@@ -15,36 +15,36 @@
 
     <!-- top nav -->
 
-        
 
 
-<div class="topnav">
-    <div style="display: inline-flex;" class="dangxuat">
-        <a href="index.html" class="dangxuat">Đăng xuất</a>
-    </div>
 
-    <div style="display: inline-flex;" class="dangnhap">
-        <a href="personal_infomation.html">
-            <img src="images/iconuser.png" class="editphucadmin" style="width: 22px">
-            <section style="display: inline-block">
-                user1            </section>
-        </a>
-    </div>
+    <div class="topnav">
+        <div style="display: inline-flex;" class="dangxuat">
+            <a href="index.html" class="dangxuat">Đăng xuất</a>
+        </div>
 
-    <a class="active" href="user.html" style="background-color: black;">Trang chủ</a>
-    <a href="sanpham_trangchu.html">Sản phẩm</a>
-    <a href="cart.html">Giỏ hàng</a>
-    <a href="timkiem_trangchu.html" class="account">Tìm kiếm</a>
-    <div class="search-container">
-        <form action="sanpham_timkiem_trangchu.html" method="GET">
-            <input type="hidden" name="username" value="user1">
-            <input type="text" placeholder="Tìm kiếm.." name="searchtext">
-            <button type="submit" name="search">
-                <i class="fa fa-search"></i>
-            </button>
-        </form>
-    </div>
-</div>    <!-- end header -->
+        <div style="display: inline-flex;" class="dangnhap">
+            <a href="personal_infomation.html">
+                <img src="images/iconuser.png" class="editphucadmin" style="width: 22px">
+                <section style="display: inline-block">
+                    user1 </section>
+            </a>
+        </div>
+
+        <a class="active" href="user.html" style="background-color: black;">Trang chủ</a>
+        <a href="sanpham_trangchu.html">Sản phẩm</a>
+        <a href="cart.html">Giỏ hàng</a>
+        <a href="timkiem_trangchu.html" class="account">Tìm kiếm</a>
+        <div class="search-container">
+            <form action="sanpham_timkiem_trangchu.html" method="GET">
+                <input type="hidden" name="username" value="user1">
+                <input type="text" placeholder="Tìm kiếm.." name="searchtext">
+                <button type="submit" name="search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div> <!-- end header -->
 
     <div class="spacing"></div>
     <main role="main">
@@ -58,80 +58,102 @@
 
             <div class="card">
                 <div class="container-fliud">
-<!--                    <form name="frmsanphamchitiet" id="frmsanphamchitiet" method="post" action="cart.html">-->
+                    <!--                    <form name="frmsanphamchitiet" id="frmsanphamchitiet" method="post" action="cart.html">-->
 
-                                                <div class="wrapper row">
-                            <div class="preview col-md-6">
-                                <div class="preview-pic tab-content">
-                                    <div class="tab-pane" id="pic-1">
-                                        <img src="images/sofa2.jpg">
-                                    </div>
-                                    <div class="tab-pane" id="pic-2">
-                                        <img src="images/sofa2.jpg">
-                                    </div>
-                                    <div class="tab-pane active" id="pic-3">
-                                        <img src="images/sofa2.jpg">
-                                    </div>
+                    <div class="wrapper row">
+                        <div class="preview col-md-6">
+                            <div class="preview-pic tab-content">
+                                <div class="tab-pane" id="pic-1">
+                                    <img src="images/sofa2.jpg">
                                 </div>
-                                <ul class="preview-thumbnail nav nav-tabs">
-                                    <li class="active">
-                                        <a data-target="#pic-1" data-toggle="tab" class="">
-                                            <img src="images/sofa2.jpg">
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a data-target="#pic-2" data-toggle="tab" class="">
-                                            <img src="images/sofa2.jpg">
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a data-target="#pic-3" data-toggle="tab" class="active">
-                                            <img src="images/sofa2.jpg">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="details col-md-6">
-                                <!-- Tên Sản phẩm được thêm ở đây-->
-                                <h3 class="product-title">SOFA TRẮNG TINH TẾ</h3>
-                                <div class="rating">
-                                    <div class="stars">
-                                                                                    <i class="fa fa-star"></i>
-                                                                                    <i class="fa fa-star"></i>
-                                                                                    <i class="fa fa-star"></i>
-                                                                                    <i class="fa fa-star"></i>
-                                                                                <i class="fa fa-star-half-o"></i>
-                                    </div>
+                                <div class="tab-pane" id="pic-2">
+                                    <img src="images/sofa2.jpg">
                                 </div>
-                                <!--Mô tả sản phẩm ở đây-->
-                                <p class="product-description"></p>
-                                <h4 class="price">Giá: <span>300</span></h4>
-                                <p class="vote"><strong>100%</strong> hàng <strong>Chất lượng</strong>, đảm bảo <strong>Uy tín</strong>!</p>
-                                <form id="add-to-cart-form" action="cart.html" method="post">
-                                    <div class="form-group">
-                                        <label for="soluong">Số lượng đặt mua:</label>
-                                            <input type="number" min="1" max="1000" class="form-control" id="soluong" name="quantity" value="1">
-                                    </div>
-                                    <div class="main">
-                                            <input type="hidden" name="id_product" value="13">
-                                            <input class="add-to-cart btn btn-default" name="themvaogiohang"
-                                                   id="btnThemVaoGioHang" type="submit" value="Thêm vào giỏ hàng">
-                                </form>
+                                <div class="tab-pane active" id="pic-3">
+                                    <img src="images/sofa2.jpg">
                                 </div>
                             </div>
+                            <ul class="preview-thumbnail nav nav-tabs">
+                                <li class="active">
+                                    <a data-target="#pic-1" data-toggle="tab" class="">
+                                        <img src="images/sofa2.jpg">
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a data-target="#pic-2" data-toggle="tab" class="">
+                                        <img src="images/sofa2.jpg">
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a data-target="#pic-3" data-toggle="tab" class="active">
+                                        <img src="images/sofa2.jpg">
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="container-fluid">
-                    <h3>Thông tin chi tiết về Sản phẩm</h3>
-                    <div class="row">
-                        <div class="col">
-                                                    </div>
+                        <div class="details col-md-6">
+                            <h3 class="product-title">SOFA TRẮNG TINH TẾ</h3>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                </div>
+                            </div>
+                            <p class="product-description"></p>
+                            <h4 class="price">Giá: <span>120</span></h4>
+                            <p class="vote"><strong>100%</strong> hàng <strong>Chất lượng</strong>, đảm bảo <strong>Uy tín</strong>!</p>
+                            
+                            <div id="notification" class="alert alert-success d-none" role="alert">
+                                Sản phẩm đã được thêm vào giỏ hàng thành công!
+                            </div>
+                        
+                            <form id="add-to-cart-form" action="cart.html" method="post">
+                                <div class="form-group">
+                                    <label for="soluong">Số lượng đặt mua:</label>
+                                    <input type="number" min="1" max="1000" class="form-control" id="soluong" name="quantity" value="1">
+                                </div>
+                                <div class="main">
+                                    <input type="hidden" name="id_product" value="5">
+                                    <input class="add-to-cart btn btn-default" name="themvaogiohang" id="btnThemVaoGioHang" type="submit" value="Thêm vào giỏ hàng">
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <script>
+                            document.getElementById("add-to-cart-form").onsubmit = function(event) {
+                                event.preventDefault(); // Ngăn chặn hành động mặc định của biểu mẫu
+                        
+                                // Hiển thị thông báo
+                                var notification = document.getElementById("notification");
+                                notification.classList.remove("d-none"); // Hiện thông báo
+                        
+                                // Ẩn thông báo sau 3 giây
+                                setTimeout(function() {
+                                    notification.classList.add("d-none"); // Ẩn thông báo
+                                }, 3000);
+                        
+                                // Nếu cần thiết, bạn có thể thực hiện hành động thêm sản phẩm vào giỏ hàng ở đây
+                                // Ví dụ: gửi dữ liệu đến máy chủ hoặc cập nhật giỏ hàng
+                            };
+                        </script>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="card">
+            <div class="container-fluid">
+                <h3>Thông tin chi tiết về Sản phẩm</h3>
+                <div class="row">
+                    <div class="col">
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <!-- End block content -->
     </main>

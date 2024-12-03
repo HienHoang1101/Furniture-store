@@ -13,6 +13,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .quantity-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px; /* Khoảng cách giữa các nút và ô nhập */
+        }
+        
+        .btn-quantity {
+            width: 30px;
+            height: 30px;
+            background-color: #f0f0f0; /* Màu nền */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+        
+        .btn-quantity:hover {
+            background-color: #e0e0e0; /* Màu khi hover */
+        }
+        
+        .quantity-input {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+    </style>
 </head>
 
 <body>
@@ -70,8 +108,14 @@
                             <img id="product-img" src="images/sofa4.jpg">
                         </td>
                         <td class="product-price">260</td>
-                        <td class="product-quantity">1</td>
-                        <td class="product-money">260€</td>
+                        <td class="product-quantity">
+                            <div class="quantity-wrapper">
+                                <button type="button" class="btn-quantity" onclick="decreaseQuantity(this)">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button type="button" class="btn-quantity" onclick="increaseQuantity(this)">+</button>
+                            </div>
+                        </td>
+                                                <td class="product-money">260€</td>
                         <td class="product-delete">
                             <a href="cart.html" onclick="showDeleteSuccess(); return false;">Xóa</a>
                         </td>
@@ -83,8 +127,14 @@
                             <img id="product-img" src="images/sofa1.jpg">
                         </td>
                         <td class="product-price">250</td>
-                        <td class="product-quantity">1</td>
-                        <td class="product-money">250€</td>
+                        <td class="product-quantity">
+                            <div class="quantity-wrapper">
+                                <button type="button" class="btn-quantity" onclick="decreaseQuantity(this)">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button type="button" class="btn-quantity" onclick="increaseQuantity(this)">+</button>
+                            </div>
+                        </td>
+                                                <td class="product-money">250€</td>
                         <td class="product-delete">
                             <a href="cart.html" onclick="showDeleteSuccess(); return false;">Xóa</a>
                         </td>
@@ -96,8 +146,14 @@
                             <img id="product-img" src="images/bed1.jpg">
                         </td>
                         <td class="product-price">300</td>
-                        <td class="product-quantity">1</td>
-                        <td class="product-money">300€</td>
+                        <td class="product-quantity">
+                            <div class="quantity-wrapper">
+                                <button type="button" class="btn-quantity" onclick="decreaseQuantity(this)">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button type="button" class="btn-quantity" onclick="increaseQuantity(this)">+</button>
+                            </div>
+                        </td>
+                                                <td class="product-money">300€</td>
                         <td class="product-delete">
                             <a href="cart.html" onclick="showDeleteSuccess(); return false;">Xóa</a>
                         </td>
@@ -109,8 +165,14 @@
                             <img id="product-img" src="images/table4.jpg">
                         </td>
                         <td class="product-price">75</td>
-                        <td class="product-quantity">1</td>
-                        <td class="product-money">75€</td>
+                        <td class="product-quantity">
+                            <div class="quantity-wrapper">
+                                <button type="button" class="btn-quantity" onclick="decreaseQuantity(this)">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button type="button" class="btn-quantity" onclick="increaseQuantity(this)">+</button>
+                            </div>
+                        </td>
+                                                <td class="product-money">75€</td>
                         <td class="product-delete">
                             <a href="cart.html" onclick="showDeleteSuccess(); return false;">Xóa</a>
                         </td>
@@ -122,8 +184,14 @@
                             <img id="product-img" src="images/mirror4.jpg">
                         </td>
                         <td class="product-price">90</td>
-                        <td class="product-quantity">1</td>
-                        <td class="product-money">90€</td>
+                        <td class="product-quantity">
+                            <div class="quantity-wrapper">
+                                <button type="button" class="btn-quantity" onclick="decreaseQuantity(this)">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button type="button" class="btn-quantity" onclick="increaseQuantity(this)">+</button>
+                            </div>
+                        </td>
+                                                <td class="product-money">90€</td>
                         <td class="product-delete">
                             <a href="cart.html" onclick="showDeleteSuccess(); return false;">Xóa</a>
                         </td>
@@ -141,7 +209,7 @@
                 </table>
                 <ul id="shopping-cart-actions">
                     <li>
-                        <a href="select_address.html" id="thanhtoan" class="btn">Thanh toán</a>
+                        <a href="select_address_done.html" id="thanhtoan" class="btn">Thanh toán</a>
                     </li>
                     <li>
                         <a href="sanpham_trangchu.html" class="btn">Tiếp tục mua sắm</a>
@@ -155,7 +223,42 @@
             alert("Xóa sản phẩm thành công!");
         }
         </script>
-        
+        <script>
+            function decreaseQuantity(button) {
+                let quantityInput = button.nextElementSibling;
+                let currentValue = parseInt(quantityInput.value);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                    updateTotal(button);
+                }
+            }
+            
+            function increaseQuantity(button) {
+                let quantityInput = button.previousElementSibling;
+                let currentValue = parseInt(quantityInput.value);
+                quantityInput.value = currentValue + 1;
+                updateTotal(button);
+            }
+            
+            function updateTotal(button) {
+                let row = button.closest('tr');
+                let price = parseFloat(row.querySelector('.product-price').innerText);
+                let quantity = parseInt(row.querySelector('.quantity-input').value);
+                let totalCell = row.querySelector('.product-money');
+                totalCell.innerText = (price * quantity).toFixed(2) + '€';
+            
+                updateGrandTotal();
+            }
+            
+            function updateGrandTotal() {
+                let total = 0;
+                document.querySelectorAll('.product-money').forEach(cell => {
+                    total += parseFloat(cell.innerText.replace('€', ''));
+                });
+                document.querySelector('#row-total .product-money').innerText = total.toFixed(2) + '€';
+            }
+            
+        </script>
 </body>
 
 </html>

@@ -54,7 +54,7 @@
             <a href="timkiem_trangchu.html" class="account">Tìm kiếm</a>
             <div class="search-container">
                 <input type="text" id="searchtext" placeholder="Tìm kiếm.." oninput="searchProducts()">
-                
+
                 <button type="button" onclick="searchProducts()">
                     <i class="fa fa-search"></i>
                 </button>
@@ -64,6 +64,7 @@
     </div>
     <!--end header-->
     <main role="main">
+
         <div class="container mt-4">
             <form name="frmTimKiem" id="searchForm">
                 <h1 class="text-center" style="margin-top: 75px;">Sản phẩm tìm thấy</h1>
@@ -81,7 +82,11 @@
         </div>
         <div style="text-align: center;" id="pagination">
             <!-- Pagination will be dynamically inserted here -->
+            <button id="prevPage" class="btn btn-secondary" onclick="changePage(-1)">« Trước</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage" class="btn btn-secondary" onclick="changePage(1)">Tiếp theo »</button>
         </div>
+
     </main>
 
     <footer class="footer mt-auto py-3">
@@ -92,7 +97,7 @@
         </div>
     </footer>
 
-    <script>
+    <!-- <script>
         const products = [
             { id: 5, image: 'image1.jpg', name: 'Giường đôi', price: '120€', trang_thai: 1 },
             { id: 6, image: 'mirror4.jpg', name: 'Gương siêu bự', price: '90€', trang_thai: 1 },
@@ -178,11 +183,114 @@
             }
         });
         
-        
-
       // document.addEventListener('DOMContentLoaded', () => {
         //   renderProducts(products); // Hiển thị tất cả sản phẩm khi trang được tải
     //});
+    </script> -->
+    <script>
+        const products = [
+            { id: 5, image: 'image1.jpg', name: 'Giường đôi', price: '120€', trang_thai: 1 },
+            { id: 6, image: 'mirror4.jpg', name: 'Gương siêu bự', price: '90€', trang_thai: 1 },
+            { id: 7, image: 'sofa4.jpg', name: 'Sofa loại cực êm', price: '260€', trang_thai: 1 },
+            { id: 9, image: 'table4.jpg', name: 'Bàn siêu cứng', price: '75€', trang_thai: 1 },
+            { id: 10, image: 'bed1.jpg', name: 'Giường gỗ bạch dương', price: '300€', trang_thai: 1 },
+            { id: 11, image: 'bed2.jpg', name: 'Giường tiện lợi', price: '290€', trang_thai: 1 },
+            { id: 12, image: 'sofa1.jpg', name: 'Sofa luxury', price: '250€', trang_thai: 1 },
+            { id: 13, image: 'sofa2.jpg', name: 'Sofa trắng tinh tế', price: '300€', trang_thai: 1 },
+            { id: 14, image: 'table1.jpg', name: 'Bàn kính', price: '2000€', trang_thai: 1 },
+            { id: 15, image: 'table2.jpg', name: 'Bàn văn phòng', price: '230€', trang_thai: 1 },
+            { id: 16, image: 'mirror1.jpg', name: 'Gương trang điểm', price: '120€', trang_thai: 1 },
+            { id: 17, image: 'mirror2.jpg', name: 'Gương mặt trời', price: '120€', trang_thai: 1 },
+            { id: 18, image: 'bed5.jpg', name: 'Giường luxury', price: '1000€', trang_thai: 1 },
+            { id: 19, image: 'sofa5.jpg', name: 'Sofa loại tốt', price: '200€', trang_thai: 1 },
+            { id: 20, image: 'table5.jpg', name: 'Bàn gỗ sồi', price: '900€', trang_thai: 1 },
+        ];
+
+        const productsPerPage = 4; // Số sản phẩm hiển thị trên mỗi trang
+        let currentPage = 1; // Trang hiện tại
+
+        function renderProducts(productsToRender) {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';
+
+            if (productsToRender.length === 0) {
+                productList.innerHTML = '<p>Không có sản phẩm được tìm thấy</p>';
+                return;
+            }
+
+            // Tính toán số trang
+            const totalPages = Math.ceil(productsToRender.length / productsPerPage);
+            const startIndex = (currentPage - 1) * productsPerPage;
+            const endIndex = Math.min(startIndex + productsPerPage, productsToRender.length);
+
+            // Hiển thị sản phẩm cho trang hiện tại
+            for (let i = startIndex; i < endIndex; i++) {
+                const product = productsToRender[i];
+                const productDiv = document.createElement('div');
+                productDiv.className = 'col-md-3';
+                productDiv.innerHTML = `
+                    <div class="product-top">
+                        <img src="images/${product.image}" alt="">
+                        <div class="overlay-right">
+                            <a href="productdetail.html?id=${product.id}" class="btn btn-secondary" title="Xem chi tiết">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <button class="btn btn-secondary" title="Thêm vào giỏ hàng" onclick="addToCart(${product.id})">
+                                                           <i class="fa fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-bottom text-center">
+                    <h4>${product.name}</h4>
+                    <p class="product-price">${product.price}</p>
+                </div>
+            `;
+                productList.appendChild(productDiv);
+            }
+
+            // Cập nhật thông tin phân trang
+            updatePagination(totalPages);
+        }
+
+        function updatePagination(totalPages) {
+            const pageInfo = document.getElementById('pageInfo');
+            pageInfo.innerText = `Trang ${currentPage} / ${totalPages}`;
+
+            document.getElementById('prevPage').disabled = currentPage === 1;
+            document.getElementById('nextPage').disabled = currentPage === totalPages;
+        }
+
+        function changePage(direction) {
+            const totalPages = Math.ceil(products.length / productsPerPage);
+            currentPage += direction;
+            currentPage = Math.max(1, Math.min(currentPage, totalPages)); // Giới hạn trang
+
+            renderProducts(products); // Hiển thị sản phẩm cho trang mới
+        }
+
+        function searchProducts() {
+            const searchText = document.getElementById('searchtext').value.toLowerCase().trim();
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(searchText)
+            );
+
+            currentPage = 1; // Reset trang về 1 khi tìm kiếm
+            renderProducts(filteredProducts); // Chỉ hiển thị sản phẩm khớp từ khóa
+        }
+
+        function addToCart(productId) {
+            const notification = document.getElementById("notification");
+            notification.classList.remove("d-none"); // Hiện thông báo
+
+            // Ẩn thông báo sau 3 giây
+            setTimeout(function () {
+                notification.classList.add("d-none"); // Ẩn thông báo
+            }, 3000);
+        }
+
+        // document.addEventListener('DOMContentLoaded', () => {
+        //   renderProducts(products); // Hiển thị tất cả sản phẩm khi trang được tải
+        //});
     </script>
 </body>
 
