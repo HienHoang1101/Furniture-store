@@ -104,6 +104,8 @@ input[name="order-click"]{
     transition: 0.3s;
 }
 
+
+/* tăng giảm giá */
 .close:hover,
 .close:focus {
     color: #bbb;
@@ -116,4 +118,40 @@ input[name="order-click"]{
     .modal-content {
         width: 100%;
     }
+}
+
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Khoảng cách giữa các nút và ô nhập */
+}
+
+.btn-quantity {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0; /* Màu nền */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.btn-quantity:hover {
+    background-color: #e0e0e0; /* Màu khi hover */
+}
+
+.quantity-input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }

@@ -1,5 +1,4 @@
-<span style="font-family: verdana, geneva, sans-serif;">
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
 
     <head>
@@ -9,6 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
             integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <span style="font-family: verdana, geneva, sans-serif;"><span style="font-family: verdana, geneva, sans-serif;"></span>
     </head>
 
     <body>
@@ -18,11 +18,10 @@
                 <div class="navbar">
                     <a href="index.html" style="color: black;">
                         <div class="logo">
-                            <img src="image/meoadmin.jpg" alt="">
-                            <h1></h1>
+                          <a href="user-info.html"><img src="image/meoadmin.jpg" alt=""> </a>
+                            <h1>Admin</h1>
                         </div>
                     </a>
-                    <div class="account-type">Tài khoản: Admin</div>
                     <ul>
                         <li>
                             <!-- drop down sidebar -->
@@ -87,7 +86,7 @@
                                 function logOut() {
                                     if (confirm('Đăng xuất ?')) {
                                         alert("Đăng xuất thành công");
-                                        window.location.replace("../web/login.html");
+                                        window.location.replace("../user/login.html");
                                     }
                                 }
                             </script>
