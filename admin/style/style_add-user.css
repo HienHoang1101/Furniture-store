@@ -13,7 +13,7 @@ td{
     padding-bottom: 40px;
 }
 
-select, input:not(#img), option{
+select, input:not(#img,.buttonsubmit), option{
     background-color: rgb(230, 230, 230);
     display: block;
     width: 100%;
@@ -29,13 +29,15 @@ select, input:not(#img), option{
     border-radius: 0.25rem;
     transition: border-color .15s
 }
-.buttonsubmit, .buttonReset{
+.buttonsubmit, .buttonReset, input[type='button']
+{
     font-size: 16px;
     background-color:#343a40;
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
 }
+
 .submit-form, .reset-form{
     display:inline-block;
     padding-left: 15px;
