@@ -225,7 +225,19 @@ input.select{
     position: relative;
 }
 
-/* Nut xac nhan */
-button[name='update']{
-    background-color: none;
+/* Nut Cập nhật */
+#buttonsubmit
+{
+    background-color: white;
+    color: blue;
+}
+#buttonsubmit:hover{
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+/* Cập nhật tình trạng đơn */
+select[name="selection"]
+{
+    cursor: pointer;
 }

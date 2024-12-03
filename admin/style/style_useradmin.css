@@ -25,9 +25,13 @@ th, .stt{
 .sua{
     color: blue;
     text-align: center;
+    background-color: white;
 }
 .sua:hover{
     font-weight: bold;
+}
+input[name='submitFix']:hover{
+    cursor: pointer;
 }
 
 /* phần tìm kiếm người dùng */
@@ -77,7 +81,19 @@ button[name="submit"]:hover{
     cursor: pointer;
     font-weight: bold;
 }
+/* Tinh trang tai khoan "khóa" */
 .khoa{
     text-align: center;
     width: 10%;
+}
+input[name='submit']
+{
+    background-color: white;
+    color: rgba(255, 0, 0, 0.667);
+}
+input[name='submit']:hover
+{
+    cursor: pointer;
+    font-weight: bold;
+    color: red;
 }
