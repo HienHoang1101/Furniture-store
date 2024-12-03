@@ -125,33 +125,16 @@
                             <form method="POST">
                                 <td class="status stt">
                                     <input type="hidden" name="username" value="1">
-                                    <input type="checkbox" id="lockCheckbox1" value="1" checked disabled>
+                                    <input type="checkbox" name="lock" value="1" checked>
                                 </td>
 
                                 <td class="khoa">
-                                    <button type="button" name="submit" onclick="toggleCheckbox1()">Thao tác</button>
+                                    <input type="submit" name="submit" value="Thao tác">
                                 </td>
 
                                 <td class="sua">
                                     <input type="button" name="submitFix" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html'">
                                 </td>
-
-                                <script>
-                                    function toggleCheckbox1() {
-                                        // Lấy checkbox theo ID
-                                        const checkbox = document.getElementById('lockCheckbox1');
-                                
-                                        // Đảo ngược trạng thái của checkbox
-                                        checkbox.checked = !checkbox.checked;
-
-                                        // Hiển thị thông báo dựa trên trạng thái mới của checkbox
-                                        if (checkbox.checked) {
-                                            alert("Mở thành công");
-                                        } else {
-                                            alert("Khóa thành công");
-                                        }
-                                    }
-                                </script>
                             </form>
                         </tr>
                         <td class="stt"> 2 </td>
@@ -163,29 +146,16 @@
                         <form method="POST">
                             <td class="status stt">
                                 <input type="hidden" name="username" value="123">
-                                <input type="checkbox" id="lockCheckbox2" value="1" checked disabled>
+                                <input type="checkbox" name="lock" value="1" checked>
                             </td>
 
                             <td class="khoa">
-                                <button type="button" name="submit" onclick="toggleCheckbox2()">Thao tác</button>
+                                <input type="submit" name="submit" value="Thao tác">
                             </td>
 
                             <td class="sua">
                                 <input type="button" name="submitFix" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html'">
                             </td>
-
-                            <script>
-                                function toggleCheckbox2() {
-                                    const checkbox = document.getElementById('lockCheckbox2');
-                                    checkbox.checked = !checkbox.checked;
-
-                                    if (checkbox.checked) {
-                                        alert("Mở thành công");
-                                    } else {
-                                        alert("Khóa thành công");
-                                    }
-                                }
-                            </script>
                         </form>
                         </tr>
                         <td class="stt"> 3 </td>
@@ -197,28 +167,16 @@
                         <form method="POST">
                             <td class="status stt">
                                 <input type="hidden" name="username" value="aaa">
-                                <input type="checkbox" id="lockCheckbox3" value="1" checked disabled>
+                                <input type="checkbox" name="lock" value="1" checked>
                             </td>
 
                             <td class="khoa">
-                                <button type="button" name="submit" onclick="toggleCheckbox3()">Thao tác</button>
+                                <input type="submit" name="submit" value="Thao tác">
                             </td>
 
                             <td class="sua">
                                 <input type="button" name="submitFix" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html'">
                             </td>
-
-                            <script>
-                                function toggleCheckbox3() {
-                                    const checkbox = document.getElementById('lockCheckbox3');
-                                    checkbox.checked = !checkbox.checked;
-                                    if (checkbox.checked) {
-                                        alert("Mở thành công");
-                                    } else {
-                                        alert("Khóa thành công");
-                                    }
-                                }
-                            </script>
                         </form>
                         </tr>
                         <td class="stt"> 4 </td>
@@ -230,28 +188,16 @@
                         <form method="POST">
                             <td class="status stt">
                                 <input type="hidden" name="username" value="nhattruong">
-                                <input type="checkbox" id="lockCheckbox4" value="1" checked disabled>
+                                <input type="checkbox" name="lock" value="1" checked>
                             </td>
 
                             <td class="khoa">
-                                <button type="button" name="submit" onclick="toggleCheckbox4()">Thao tác</button>
+                                <input type="submit" name="submit" value="Thao tác">
                             </td>
 
                             <td class="sua">
-                                <input type="button" name="submitFix" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html'">
+                                <input type="submit" name="submitFix" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html'">
                             </td>
-
-                            <script>
-                                function toggleCheckbox4() {
-                                    const checkbox = document.getElementById('lockCheckbox4');
-                                    checkbox.checked = !checkbox.checked;
-                                    if (checkbox.checked) {
-                                        alert("Mở thành công");
-                                    } else {
-                                        alert("Khóa thành công");
-                                    }
-                                }
-                            </script>
                         </form>
                         </tr>
                         <td class="stt"> 5 </td>
@@ -263,28 +209,16 @@
                         <form method="POST">
                             <td class="status stt">
                                 <input type="hidden" name="username" value="test2">
-                                <input type="checkbox" id="lockCheckbox5" value="1" checked disabled>
+                                <input type="checkbox" name="lock" value="1" checked>
                             </td>
 
                             <td class="khoa">
-                                <button type="button" name="submit" onclick="toggleCheckbox5()">Thao tác</button>
+                                <input type="submit" name="submit" value="Thao tác">
                             </td>
 
                             <td class="sua">
-                                <input type="button" name="submitFix" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html'">
+                                <input type="submit" name="submitFix" class="sua" value="Sửa" onclick="window.location.href='edit_user-admin.html'">
                             </td>
-
-                            <script>
-                                function toggleCheckbox5() {
-                                    const checkbox = document.getElementById('lockCheckbox5');
-                                    checkbox.checked = !checkbox.checked;
-                                    if (checkbox.checked) {
-                                        alert("Mở thành công");
-                                    } else {
-                                        alert("Khóa thành công");
-                                    }
-                                }
-                            </script>
                         </form>
                         </tr>
                 </table>
